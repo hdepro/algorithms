@@ -26,3 +26,5 @@ a[2] =4;
 console.log(b);
 b[2] = 5;
 console.log(a);
+
+console.log(0 && 3 || 4 && 5);
