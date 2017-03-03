@@ -10,23 +10,23 @@
 "use strict";
 
 const generateParenthesis = function(n) {
-    let result = ["()"],temp=[],k = 0;
-    const recursion = function(m){
-        if(m == 1) return;
-        recursion(m-1);
-        for(let i = 0;i<result.length;i++){
-            temp.push("("+result[i]+")");
-            if(result[i][0] == "(" && result[i][1] == ")"){
-                temp.push("()"+result[i]);
-            }else{
-                temp.push("()"+result[i]);
-                temp.push(result[i]+"()");
-            }
+    let result = [],m=0;
+    const backTracking = function(left,right){
+        if(right == n) {
+            m++;
+            return;
         }
-        result = temp;
-        temp = [];
+        let s = result[m] || "";
+        if(right <= left && left < n){
+            result[m] = s+"(";
+            backTracking(left+1,right);
+        }
+        if(right < left){
+            result[m] =s + ")";
+            backTracking(left,right+1);
+        }
     };
-    recursion(n);
+    backTracking(0,0);
     return result;
 };
 
