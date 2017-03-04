@@ -28,3 +28,13 @@ b[2] = 5;
 console.log(a);
 
 console.log(0 && 3 || 4 && 5);
+console.log(parseInt("a"));
+console.log("c" > "b");
+
+var c= ['a','b','d','e','c'];
+c.sort();
+console.log(c[1.5]);
+console.log("b"-"a");
+console.log(parseInt(1.5));
+if(null) console.log(11111);
+
