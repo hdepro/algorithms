@@ -38,3 +38,8 @@ console.log("b"-"a");
 console.log(parseInt(1.5));
 if(null) console.log(11111);
 
+console.log(Math.max(1,3,2,Infinity));
+console.log(Math.min(1,3,2,a[4]));
+
+console.log(Math.max(1,2,3));
+
