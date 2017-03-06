@@ -6,7 +6,7 @@
  * @param {number[]} height
  * @return {number}
  */
-
+///
 "use strict";
 
 // const maxArea = function(height) {
