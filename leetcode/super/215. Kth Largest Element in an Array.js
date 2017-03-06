@@ -35,7 +35,7 @@ const findKthLargest = function(nums, k) {
             }
         }
         swap(i,right);
-        console.log(nums);
+        //console.log(nums);
         if(i==k-1) {
             return nums[i];
         }
@@ -56,4 +56,5 @@ const findKthLargest = function(nums, k) {
 };
 
 
-console.log(findKthLargest([3,2,1,5,6,4],2));
+//console.log(findKthLargest([3,2,1,5,6,4],2));
+
