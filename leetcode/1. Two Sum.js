@@ -8,7 +8,7 @@
  * @param {number} target
  * @return {number[]}
  */
-///
+
 var twoSum = function(nums, target) {
     var map = {};
     var length = nums.length;
