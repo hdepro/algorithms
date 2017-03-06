@@ -1,0 +1,52 @@
+
+1.对WEB标准以及W3C的理解与认识
+标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、
+内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供
+打印版本而不需要复制内容、提高网站易用性；
+
+2.xhtml和html有什么区别
+HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言
+最主要的不同：
+XHTML 元素必须被正确地嵌套。
+XHTML 元素必须被关闭。
+标签名必须用小写字母。
+XHTML 文档必须拥有根元素
+
+3.CSS引入的方式有哪些? link和@import的区别是?
+区别1：link是XHTML标签，除了加载CSS外，还可以定义RSS等其他事务；@import属于CSS范畴，只能加载CSS。
+区别2：link引用CSS时，在页面载入时同时加载；@import需要页面网页完全载入以后加载。
+区别3：link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本的浏览器不支持。
+区别4：ink支持使用Javascript控制DOM去改变样式；而@import不支持。
+
+4.javascript的本地对象，内置对象和宿主对象
+本地对象为array obj regexp等可以new实例化
+内置对象为gload Math 等不可以实例化的
+宿主为浏览器自带的document,window 等
+
+5.类数组对象和数组的区别
+类数组对象没有数组的方法;
+
+6.作用域
+1、(function(x){delete x; return x;})(1)
+输出1
+解答：在严格模式下出错，非严格不报错
+
+2、var x = 1;
+if(function z(){}){console.log( x += (typeof z));}
+输出1undefined
+
+3、var h =(function a(){console.log(1)}, function b(){console.log(2)})()
+输出2
+
+4、var h = function a(){return 23;}
+console.log(a)
+输出undefined
+
+// var bar = function foo(){};就是一个有效的命名函数表达式
+// foo只在新定义的函数作用域内有效，因为规范规定了标示符不能在外围的作用域内有效
+var f = function foo(){
+    return typeof foo; // foo是在内部作用域内有效
+};
+// foo在外部用于是不可见的
+typeof foo; // "undefined"
+f(); // "function"
