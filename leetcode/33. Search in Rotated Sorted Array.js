@@ -7,7 +7,7 @@
  * @param {number} target
  * @return {number}
  */
-
+//
 "use strict";
 
 const search = function(nums, target) {
