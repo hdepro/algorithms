@@ -7,7 +7,7 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 
-"use strict";
+"use strict";///
 
 // const wiggleSort = function(nums) {
 //     let len=nums.length,temp=0;
