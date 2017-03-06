@@ -1,8 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33170c07-9af8-497e-8429-1b38ef909d40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="33170c07-9af8-497e-8429-1b38ef909d40" name="Default" comment="gitignore">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/algorithms.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/typeof,instanceof.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/继承.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/面试常见问题" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/1. Two Sum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/11. Container With Most Water.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/15. 3Sum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/17. Letter Combinations of a Phone Number.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/19. Remove Nth Node From End of List.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/2. Add Two Numbers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/20. Valid Parentheses.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/22. Generate Parentheses.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/24. Swap Nodes in Pairs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/240. Search a 2D Matrix II.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/242. Valid Anagram.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/26. Remove Duplicates from Sorted Array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/264. Ugly Number II.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/3. Longest Substring Without Repeating Characters.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/33. Search in Rotated Sorted Array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/4. Median of Two Sorted Arrays.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/45. Jump Game II.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/55. Jump Game.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/56. Merge Intervals.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/6. ZigZag Conversion.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/78. Subsets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/94. Binary Tree Inorder Traversal.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/super/137. Single Number II.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/super/215. Kth Largest Element in an Array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/super/324. Wiggle Sort II.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/leetcode/test.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,11 +69,21 @@
       <file leaf-file-name="324. Wiggle Sort II.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leetcode/super/324. Wiggle Sort II.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -457,7 +503,7 @@
       <workItem from="1488543298994" duration="9632000" />
       <workItem from="1488589359825" duration="32895000" />
       <workItem from="1488671119785" duration="20544000" />
-      <workItem from="1488800154070" duration="2470000" />
+      <workItem from="1488800154070" duration="2638000" />
     </task>
     <task id="LOCAL-00001" summary="22,23">
       <created>1488552871043</created>
@@ -585,11 +631,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488802593219</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="gitignore">
+      <created>1488802629073</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1488802629073</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65541000" />
+    <option name="totallyTimeSpent" value="65709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -967,14 +1020,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/1. Two Sum.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1011,10 +1056,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/super/324. Wiggle Sort II.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
