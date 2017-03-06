@@ -1,0 +1,8 @@
+
+1.git reset 撤销git add的操作
+
+2.git fecth与git pull的区别
+git fetch：相当于是从远程获取最新版本到本地，不会自动merge
+git pull：相当于是从远程获取最新版本并merge到本地
+
+
