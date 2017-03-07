@@ -64,3 +64,16 @@ console.log(6^7);
 console.log(6&7);
 console.log(~~(~(1^0)^0));
 
+console.log(aobj.c+1);
+
+if(NaN) console.log("NaN is true");
+if(!NaN) console.log("NaN is false");
+console.log(2||1);
+
+console.log(Math.log2(10));
+if(undefined <= 1) console.log("undefined > 1");
+console.log(undefined <= 1);
+
+console.log([1,2,3].concat(8));
+console.log([].unshift(1));
+
