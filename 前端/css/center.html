@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        .block{
+            background:red;
+            width:1000px;
+            height:200px;
+            position:relative;
+        }
+        .block p{
+            background:green;
+            width:300px;
+            height:30px;
+
+            margin:auto;
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;
+        }
+
+        .text{
+            background:green;
+        }
+        #text{
+            line-height:100px;
+        }
+
+        .image{
+            line-height:200px;
+            background:yellow;
+        }
+        #image img{      //对非图片也适用
+            height:50px;
+            vertical-align: middle;
+        }
+
+        .table{
+            height:200px;
+            background:orange;
+            display:table;
+        }
+        .table p{
+            display:table-cell;
+            vertical-align: middle;
+        }
+
+        .negative.margin{
+            position:relative;
+            background: purple;
+            height:200px;
+            width:200px;
+        }
+        .negative.margin div{
+            background:white;
+            position:absolute;
+            left:50%;
+            top:50%;
+            height:30%;
+            width:50%;
+            margin:-15% 0 0 -25%;    //height与width要相等
+        }
+
+        .padding{
+            background:palegreen;
+            padding:5% 0;
+        }
+
+        .float{
+            height:250px;
+            background:gold;
+        }
+        #float{
+            float:left;
+            height:50%;
+            width:100%;
+            margin-bottom: -50px;
+
+        }
+        #child{
+            clear:both;
+            background:yellowgreen;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<div class="block center">
+    <p>我是不是absolute方式居中</p>
+</div>
+<div class="text center">
+    <div id="text">我是文本</div>
+</div>
+<div class="image center">
+    <div id="image">
+        <img src="../image/ml.jpeg"/>
+    </div>
+</div>
+
+<div class="table center">
+    <p>我是不是table方式居中</p>
+</div>
+
+<div class="absolute negative margin center">
+    <div>我是不是绝对定位负margin方式居中</div>
+</div>
+
+<div class="padding center">
+    <div>我是不是padding方式居中</div>
+</div>
+
+
+<div class="float center">
+    <div id="float"></div>
+    <div id="child">我是不是float方式居中</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--根元素
+    float 除了none以外的值
+    overflow 除了visible 以外的值（hidden，auto，scroll ）
+    display (table-cell，table-caption，inline-block, flex, inline-flex)
+    position值为（absolute，fixed）
+    fieldset元素
+
+    内部的Box会在垂直方向，一个接一个地放置。
+    Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
+    每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+    BFC的区域不会与float box重叠。
+    BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+    计算BFC的高度时，浮动元素也参与计算-->
+<style>
+    *{margin:0; padding: 0;}
+    html,body{
+        height: 100%;/*高度百分百显示*/
+    }
+    #left1{
+        width: 300px;
+        height: 20%;
+        background-color: #ccc;
+        float: left;
+    }
+    #right1{
+        height: 20%;
+        margin-left: 300px;
+        background-color: #eee;
+    }
+
+
+    #left2{
+        width: 300px;
+        height: 20%;
+        background-color: yellow;
+        float: left;
+    }
+    #right2{
+        height: 20%;
+        overflow:hidden;
+        background-color: green;
+    }
+
+    #left3{
+        width: 100px;
+        height: 20%;
+        background-color: red;
+        float: left;
+    }
+    #middle3{
+        height: 80%;
+        overflow: hidden;
+        background-color: orange;
+    }
+    #right3{
+        width: 200px;
+        height: 50%;
+        float:right;
+        background-color: purple;
+    }
+    .footer{
+        height:10%;
+        background:gray;
+        clear:both;
+    }
+
+    .container{
+        position: relative;
+        min-height: 460px;
+        background-color: #eee;
+        height:60%;
+    }
+
+    .left4{
+        position: absolute;
+        left: 20px;
+        width: 200px;
+        height: 200px;
+        background:green;
+    }
+    .right4{
+        position: absolute;
+        right: 20px;
+        padding: 0;
+        width: 120px;
+        height: 420px;
+        background:red;
+    }
+    .middle4{
+        margin: 0 140px 0 220px;
+        height:50%;
+        background:greenyellow;
+        overflow:hidden;
+    }
+</style>
+</head>
+<body>
+<body>
+ <div id="left1"></div>
+ <div id="right1"></div>
+ <div id="left2"></div>
+ <div id="right2"></div>
+
+ <div id="left3"></div>
+ <div id="right3"></div>
+ <div id="middle3"></div>
+ <div class="footer">我是底部3333333333</div>
+<br/>
+ <div class="container">
+     <div class="left4"></div>
+     <div class="right4"></div>
+     <div class="middle4"></div>
+     <div class="footer">我是底部44444444444</div>
+ </div>
+
+</body>
+</body>
+</html>
