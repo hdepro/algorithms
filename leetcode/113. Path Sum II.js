@@ -38,10 +38,12 @@ const pathSum = function(root, sum) {
             result.push(rightResult[i]);
         }
 
-        if(result.length == 0 && nodeValue == isum) return[[nodeValue]];
+        if(node.left == null && node.right == null && nodeValue == isum) return[[nodeValue]];
 
         return result;
     };
     return pathTree(root,sum);
 };
+
+console.log(pathSum(null));
 
