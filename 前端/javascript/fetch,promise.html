@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    const promise = fetch("http://localhost:9000/flowmall/api/test2",{
+        mode: "no-cors"                        //支持跨域
+    });
+
+//    const promise = new Promise((resolve,reject) =>{
+//        const flag = true;
+//        if(flag){
+//            resolve("resolve success")
+//        }else{
+//            reject("reject");
+//        }
+//    });
+    console.log("promise = "+promise);
+//    fetch("http://localhost:9000/flowmall/api/test2",{
+//        mode: "no-cors"                        //支持跨域
+//    }).then(function(response){
+//        console.log("success = "+response);
+//        console.log("success json = "+response.json());
+//        //Promise.resolve(response.json());
+//        return response.json();
+//    },function(fail){
+//        console.log("fail = "+fail);
+//    }).then(function(json){
+//        console.log(json)
+//    })
+
+//    fetch("http://localhost:9000/flowmall/api/test2",{
+//        mode: "no-cors"                        //支持跨域
+//    }).then(function(response){
+//        return response.json()
+//    }).then(function(json){
+//        console.log(json)
+//    })
+
+    //mode:"no-cors"，虽然不会报错，但会返回标明了opaque的数据，表明你没有权限访问
+
+    fetch("http://localhost:9000/flowmall/api/test2").then(function(response) {
+        console.log("response = "+response);
+        //console.log("response json = "+response.json());
+        return response.json()
+    }).then(function(json){
+        console.log(json)
+    })
+</script>
+</body>
+</html>
