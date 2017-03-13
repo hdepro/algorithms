@@ -77,3 +77,108 @@ console.log(undefined <= 1);
 console.log([1,2,3].concat(8));
 console.log([].unshift(1));
 
+
+
+// function Parent(){
+//     this.age=50;
+//     this.nums = [1,2,3];
+// }
+//
+// Parent.prototype.name = "parent";
+// Parent.prototype.friends = ["a","b"];
+//
+// Parent.prototype.getName = function(){
+//     console.log(this.name);
+// };
+//
+// Parent.prototype.setName = function(newName){
+//     this.name = newName;
+// };
+//
+// Parent.prototype.getFriend = function(){
+//     console.log(this.friends);
+// };
+//
+// Parent.prototype.setFriend = function(newFriend){
+//     this.friends.push(newFriend);
+// };
+//
+// function Child(){
+// }
+//
+// Child.prototype = new Parent();
+//
+// let child1 = new Child();
+// let child2 = new Child();
+//
+// child1.getName();
+// child2.getName();
+// child1.getFriend();
+// child2.getFriend();
+// child1.setName("parent1");
+// child1.setFriend("c");
+// child1.getName();
+// child2.getName();
+// child1.getFriend();
+// child2.getFriend();
+// child1.nums.push(4);
+// child1.age = 24;
+// console.log(child2.nums);
+// console.log(child2.age);
+
+
+// function Parent(){
+//     this.name="default";
+//     this.age=0;
+//     this.getName=function(){
+//         console.log(this.name);
+//     }
+// }
+//
+// Parent.prototype.getAge = function(){
+//     console.log(this.age);
+// };
+//
+// function Child(){
+//     Parent.call(this);
+// }
+//
+// let child1 = new Child();
+// let child2 = new Child();
+//
+// child1.getName();
+// child2.getName();
+// child1.getAge();
+
+
+function Parent(){
+    this.name="default";
+    this.age=0;
+    this.nums = [1,2,3];
+    this.getName=function(){
+        console.log(this.name);
+    }
+}
+
+Parent.prototype.friends = ["a","b"];
+
+Parent.prototype.getAge = function(){
+    console.log(this.age);
+};
+
+
+function Child(){
+    Parent.call(this);
+}
+
+Child.prototype = new Parent();
+
+let child1 = new Child();
+let child2 = new Child();
+
+child1.nums.push(4);
+child1.friends.push("c");
+console.log(child2.nums);
+console.log(child2.friends);
+
+
