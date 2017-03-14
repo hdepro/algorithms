@@ -133,7 +133,9 @@
 </style>
 </head>
 <body>
-<body>
+<script>
+    window.status = "已经选中该文本框"
+</script>
  <div id="left1"></div>
  <div id="right1"></div>
  <div id="left2"></div>
@@ -157,6 +159,9 @@
  <div class="sub"></div>
  <div class="extra">我是双飞翼布局</div>
 
-</body>
+<input type="button" value="new" onclick="open('./center.html','_blank')"/>
+<form target="_blank" action="./center.html">
+<input type="submit" value="new" />
+</form>
 </body>
 </html>
