@@ -39,7 +39,9 @@ People.prototype.age = 0;
 People.prototype.sayName = function(){
     console.log(this.name);
 };
-
+People.prototype.sayAge = function(){
+    console.log(1);
+};
 // People.prototype={
 //     constructor:Person,
 //     name:"default",
@@ -64,6 +66,19 @@ people1.sayAge();
 people1.__proto__.sayAge();
 
 //hasOwnProperty检测自己的属性，in检测自己和原型的属性
+
+const obj={
+    name:"heben",
+    age:24,
+    sayName:function(){
+        console.log(this.name);
+    }
+};
+obj.sayName();
+const sayName = obj.sayName;
+sayName();
+
+
 
 
 

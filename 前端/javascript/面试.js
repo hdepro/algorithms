@@ -1,6 +1,7 @@
 /**
  * Created by heben on 2017/3/14.
  */
+"use strict";
 
 Array.prototype.reduce2=function(func){
     let len = this.length,i=1,a=this[0],b=this[1];
@@ -23,7 +24,9 @@ console.log(arr.constructor === Array);
 console.log(arr.constructor === Object);
 console.log(arr.__proto__.constructor === Array);
 console.log(arr.__proto__.constructor === Object);
-
+console.log(arr.constructor === Array.prototype.constructor);
+console.log(arr.constructor === Object.prototype.constructor);
+console.log(Array.prototype.constructor === Array);
 
 function A(){
     const obj = new Object();
@@ -34,5 +37,10 @@ function A(){
 
 console.log(A());
 console.log(new A());
+
+console.log([] == false);
+console.log({} == false);
+if([]) console.log("[] is true");
+if({}) console.log("{} is true");
 
 
