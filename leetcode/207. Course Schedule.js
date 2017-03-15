@@ -12,6 +12,7 @@ var canFinish = function(numCourses, prerequisites) {
     let len=prerequisites.length,args=new Array(numCourses),temp=[],result=[],count=0;
     for(let i=0;i<len;i++){
         if(args[prerequisites[i][0]] === undefined) args[prerequisites[i][0]] = new Array(numCourses);
+        args[prerequisites[i][0]][prerequisites[i][1]] = 1;
         if(temp[prerequisites[i][0]] === undefined){
             temp[prerequisites[i][0]]=1;
         }else{
@@ -31,7 +32,6 @@ var canFinish = function(numCourses, prerequisites) {
                 }
                 j++;
             }
-            console.log(result);
             if(result.length == 0){
                 return count == numCourses;
             }
@@ -39,7 +39,7 @@ var canFinish = function(numCourses, prerequisites) {
             j=0;
             while(j<numCourses){
                 if(args[j]) {
-                    if(args[j][target] !== undefined){
+                    if(args[j][target] > 0){
                         temp[j]--;
                     }
                 }

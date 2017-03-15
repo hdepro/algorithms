@@ -218,6 +218,7 @@ console.log(arr3);}
     console.log(s[3]);
     console.log(s.length);
     console.log(undefined-1);
+    console.log(undefined>0);
 }
 
 
