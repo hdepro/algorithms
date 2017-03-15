@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span[class*="cloud"]{     /*包含*/
+            font-style:italic;
+        }
+        span[class^="bar"]{
+            background:red;
+        }
+        span[class$="y"]{
+            font-weight:bold;
+        }
+        span+span{
+            color:green;
+        }
+        span[class|="lif"]{       /*等于lif，或者以lif-开头*/
+            color:yellow;
+        }
+        span[class~="life"]{       /*包含什么。相当于span.life*/
+            color:yellow;
+        }
+
+        a{
+            color:blue;
+        }
+        a:link{
+            color:blue;   /*是叠加在默认颜色上的*/
+        }
+        a:visited{
+            color:red;
+        }
+        a:link:hover{
+            color:yellow;
+        }
+
+        input:focus{background:green;}
+
+    </style>
+</head>
+<body>
+<div>
+    <span class="barren rocky">AAAA</span>
+    <span class="cloudy barren">BBBB</span>
+    <span class="life-bearing cloudy">CCCC</span>
+    <br/><br/>
+    <a href="http://www.baidu.com" target="_blank">A1</a>&nbsp;
+    <a href="http://www.baidu.com" target="_blank">A2</a>&nbsp;
+    <a href="http://www.baidu.com" target="_blank">A3</a>&nbsp;
+    <a href="http://www.baidu.com" target="_blank">A4</a>
+    <a>A5</a><br/><br/>
+    <input type="text"/>&nbsp;
+    <input type="text"/>&nbsp;
+    <input type="text"/><br/><br/>
+    <input type="button" style="width:100px"/>
+    <input type="file" style="width:100px"/>
+</div>
+</body>
+</html>
