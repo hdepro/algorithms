@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .table{
+            width:600px;
+            border:1px solid #999;
+            border-collapse: collapse;
+        }
+        td{
+            border:1px solid #222;
+        }
+
+        span.uppercase{
+            text-transform: uppercase;
+        }
+
+        .send{
+            display:none;
+        }
+        .input:focus ~ .send{
+            display:inline-block;
+        }
+        .input:valid ~ .send{
+            display:inline-block;
+            color:red;
+        }
+        .input:focus~.like,.input:valid~.like{
+            display:none;
+        }
+
+
+        #tab>input,.tab-content{
+            display:none;
+        }
+        #tab1:checked~#content1,#tab2:checked~#content2{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>aaaaaaaaaaaa</td>
+            <td>bbbbbbbbbbbb</td>
+            <td>cccccccccccc</td>
+        </tr>
+        <tr>
+            <td>dddddddddddd</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <span class="uppercase">uppercase</span>
+    </div>
+    <br/>
+    <input type="text" class="input" required>
+    <span class="like">点赞</span>
+    <span class="send">发送</span>
+    <br/><br/>
+    <div id="tab">
+        <input type="radio" id="tab1" name="tabs" checked>
+        <label for="tab1">TAB1</label>
+        <input type="radio" id="tab2" name="tabs">
+        <label for="tab2">TAB2</label>
+        <div id="content1" class="tab-content">content1</div>
+        <div id="content2" class="tab-content">content2</div>
+    </div>
+</div>
+</body>
+</html>

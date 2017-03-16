@@ -36,3 +36,23 @@ console.log([1,2,3,4,3,5,4,5].map(a=>{
     let tmp = Symbol(a);
     if(Symbol.for(a) === tmp) return a;
 }));
+
+//Promise的缺点：一旦创建无法取消，如果不设置回调函数，Promise内部抛出的错误不会反映到外部；
+// 处于pending状态时无法得知到了那一步。
+
+var a=[];
+for(var i=0;i<10;i++){
+    a[i]=function(){
+        console.log(i);
+    }
+}
+a[6]();
+
+
+var b=[];
+for(let j=0;j<10;j++){
+    b[j]=function(){
+        console.log(j);
+    }
+}
+b[6]();

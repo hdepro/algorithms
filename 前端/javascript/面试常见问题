@@ -72,8 +72,13 @@ f(); // "function"
         文件显示
         [
         浏览器这边做的工作大致分为以下几步：
-
         加载：根据请求的URL进行域名解析，向服务器发起请求，接收文件（HTML、JS、CSS、图象等）。
-
-        解析：对加载到的资源（HTML、JS、CSS等）进行语法解析，建议相应的内部数据结构（比如HTML的DOM树，JS的（对象）属性表，CSS的样式规则等等）
+        解析：对加载到的资源（HTML、JS、CSS等）进行语法解析，建议相应的内部数据结构（比如HTML的DOM树，
+        JS的（对象）属性表，CSS的样式规则等等）
         }
+
+
+9.cors和jsonp相比：
+a.jsonp只能实现get请求，cors支持所有的
+b.cors使用XMLHttpRequest对象请求，jsonp使用src方式
+c.jsonp是被老浏览器支持，cors是新方法

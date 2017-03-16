@@ -6,7 +6,7 @@ console.log("1/0 = "+1/0);
 console.log("0/0 = "+0/0);
 
 console.log("Number --------------------------------");
-console.log("Number null = "+Number(null));
+console.log("Number null = "+Number(null));  //0
 console.log("Number undefined = "+Number(undefined));
 console.log("Number  = "+Number(""));
 console.log("Number 0xf = "+Number(0xf));
@@ -17,7 +17,7 @@ console.log("Number a = "+Number("a"));
 
 
 console.log("parseInt --------------------------------");
-console.log("parseInt null = "+parseInt(null));
+console.log("parseInt null = "+parseInt(null));   //NaN
 console.log("parseInt undefined = "+parseInt(undefined));
 console.log("parseInt  = "+parseInt(""));
 console.log("parseInt 0xf = "+parseInt(0xf));

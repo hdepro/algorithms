@@ -9,3 +9,9 @@
 
 //offsetHeight表示元素在垂直方向上占用空间的大小，以像素计，包括滚动条和边框
 //clientHeight表示元素在垂直方向上内边距以及元素内容占用空间大小，以像素计，不包括滚动条和边框
+
+function stopBubble(e){
+    var event = e||window.event;
+    event.stopPropagation?event.stopPropagation():event.cancelBubble=true;
+    event.preventDefault();
+}

@@ -44,3 +44,30 @@ if([]) console.log("[] is true");
 if({}) console.log("{} is true");
 
 
+//克隆对象
+const cloneObjFunc=function(obj){
+    let cloneObj;
+    if(obj instanceof Array) {
+        cloneObj=[];
+    }else{
+        cloneObj={};
+    }
+    if(obj == null || typeof obj != "object") return obj;
+    for(var p in obj){
+        cloneObj[p] = cloneObjFunc(obj[p]);
+    }
+    return cloneObj;
+};
+
+const oldObj = {
+    name:'heben',
+    age:24,
+    func:function(){
+        console.log(this);
+    },
+    arr:[1,2,3,4]
+};
+const newObject = cloneObjFunc(oldObj);
+console.log(newObject);
+
+
