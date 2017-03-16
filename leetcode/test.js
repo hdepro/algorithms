@@ -210,6 +210,15 @@ console.log(arr3);}
 {let arr1 = [1,2,3,4,5];
     console.log(arr1.splice(1,2,...[11,16]));
     console.log(arr1);
+    console.log([].shift());
+    const s=[];
+    s[0]=2,s[3]=5;
+    //s[0]=undefined,s[3]=undefined;
+    delete s[3];
+    console.log(s[3]);
+    console.log(s.length);
+    console.log(undefined-1);
+    console.log(undefined>0);
 }
 
 
