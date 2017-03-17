@@ -15,3 +15,6 @@ function stopBubble(e){
     event.stopPropagation?event.stopPropagation():event.cancelBubble=true;
     event.preventDefault();
 }
+
+// 相对于 DOM 对象，原生的 JavaScript 对象处理起来更快，
+// 而且更简单。DOM 树上的结构、属性信息我们都可以很容易地用 JavaScript 对象表示出来

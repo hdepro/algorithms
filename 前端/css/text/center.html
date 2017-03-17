@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .text>.text-indent{
+            text-indent:-3em;
+            font-size:20px;
+            padding-left:3rem;
+        }
+        .text>.text-align{
+            text-align:center;
+        }
+        .text>.justify{
+            text-align:justify;
+        }
+
+        .text>.line-height{
+            line-height:20px;
+        }
+
+        .text>.inherit{
+            font-size:10px;
+            line-height:1em;  /*子元素继承计算后的结果*/
+        }
+        .inherit-line-height{
+            font-size:18px;
+        }
+
+        .text>.inherit-num{
+            font-size:10px;
+            line-height:1;  /*当为数字时，继承缩放因子，而不是计算后的数*/
+        }
+        .inherit-line-height{
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+<div class="text">
+    <p class="text-indent">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacdsjjskaaaaaaaaaaa
+        skkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+    </p>
+    <p class="text-align">我是块级元素居中</p>
+    <span class="text-align">我是行内元素无法居中</span>
+    <center><span class="text-align">我是使用center居中的行内元素</span></center>
+    <p class="justify">
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacdsjjskaaaaaaaaaaqqqq
+        skkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+    </p>
+    <p class="line-height">line-heightline-heightline-heightline-height</p>
+    <div class="inherit">
+        <p class="inherit-line-height">
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        </p>
+    </div>
+    <div class="inherit-num">
+        <p class="inherit-line-height">
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+            cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        </p>
+    </div>
+</div>
+</body>
+</html>
