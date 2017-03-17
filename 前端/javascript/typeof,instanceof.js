@@ -1,7 +1,7 @@
 /**
  * Created by heben on 2017/3/5.
  */
-
+"use strict";
 //11111111111111111111111
 const string="";
 const array=[];
@@ -43,3 +43,13 @@ console.log(Object.prototype.toString.call(null));
 
 if([]) console.log("[] is true");
 console.log([] == false);
+
+function test(){
+    console.log(this);
+}
+console.log(typeof test);
+console.log(test instanceof Function);
+
+const test2 = function(){};
+console.log(typeof test2);
+console.log(test2 instanceof Function);

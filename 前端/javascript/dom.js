@@ -9,3 +9,12 @@
 
 //offsetHeight表示元素在垂直方向上占用空间的大小，以像素计，包括滚动条和边框
 //clientHeight表示元素在垂直方向上内边距以及元素内容占用空间大小，以像素计，不包括滚动条和边框
+
+function stopBubble(e){
+    var event = e||window.event;
+    event.stopPropagation?event.stopPropagation():event.cancelBubble=true;
+    event.preventDefault();
+}
+
+// 相对于 DOM 对象，原生的 JavaScript 对象处理起来更快，
+// 而且更简单。DOM 树上的结构、属性信息我们都可以很容易地用 JavaScript 对象表示出来
