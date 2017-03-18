@@ -6,3 +6,62 @@ CSS属性Hack、CSS选择符Hack以及IE条件注释Hack， Hack主要针对IE�
 来决定元素的具体显示内容，没有实际内容也会显示一定的宽高），可以设置宽高。几乎所有的可替换元素都是行内元素
 
 3.伪元素选择器必须位于最后面
+
+4.兼容性
+巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。
+  .bb{
+   background-color:#f1ee18;/*所有识别*/
+  .background-color:#00deff\9; /*IE6、7、8识别*/
+  +background-color:#a200ff;/*IE6、7识别*/
+  _background-color:#1e0bd1;/*IE6识别*/
+  }
+png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.
+浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。
+
+5.html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和HTML5？
+
+      HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+      绘画 canvas
+      用于媒介回放的 video 和 audio 元素
+      本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；
+      sessionStorage 的数据在浏览器关闭后自动删除
+      语意化更好的内容元素，比如 article、footer、header、nav、section
+      表单控件，calendar、date、time、email、url、search
+      新的技术webworker, websockt, Geolocation
+
+      移除的元素
+      纯表现的元素：basefont，big，center，font, s，strike，tt，u；
+      对可用性产生负面影响的元素：frame，frameset，noframes；
+
+6.   *iframe会阻塞主页面的Onload事件；
+     *iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。
+     使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript
+     动态给iframe添加src属性值，这样可以可以绕开以上两个问题。
+
+
+
+webSocket如何兼容低浏览器？(阿里)
+   Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR
+
+
+
+CSS3有哪些新特性？
+       CSS3实现圆角（border-radius:8px），阴影（box-shadow:10px），
+     对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+     transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+     增加了更多的CSS选择器  多背景 rgba
+
+
+
+new操作符具体干了什么呢?
+         1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+             2、属性和方法被加入到 this 引用的对象中。
+          3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+    var obj  = {};
+    obj.__proto__ = Base.prototype;
+    Base.call(obj);
+
+
+
+
+
