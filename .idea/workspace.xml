@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a23dc0a-14b5-49eb-ba80-d284e1ee1d0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/leetcode/31. Next Permutation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/leetcode/61. Rotate List.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/自我介绍.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/leetcode/5. Longest Palindromic Substring.js" afterPath="$PROJECT_DIR$/leetcode/5. Longest Palindromic Substring.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -88,14 +86,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="61. Rotate List.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="61. Rotate List.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetcode/61. Rotate List.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state relative-caret-position="308">
+              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="自我介绍.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/自我介绍.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -146,6 +154,7 @@
         <option value="$PROJECT_DIR$/leetcode/5. Longest Palindromic Substring.js" />
         <option value="$PROJECT_DIR$/leetcode/31. Next Permutation.js" />
         <option value="$PROJECT_DIR$/leetcode/61. Rotate List.js" />
+        <option value="$PROJECT_DIR$/自我介绍.txt" />
       </list>
     </option>
   </component>
@@ -325,11 +334,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\algorithms\前端\image" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\algorithms\leetcode\super" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\algorithms" />
+      <recent name="D:\project\algorithms\前端\image" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.31. Next Permutation.js">
@@ -447,7 +457,7 @@
       <workItem from="1489760455846" duration="2270000" />
       <workItem from="1489797475315" duration="65000" />
       <workItem from="1489831791985" duration="9100000" />
-      <workItem from="1489885070455" duration="8158000" />
+      <workItem from="1489885070455" duration="9460000" />
     </task>
     <task id="LOCAL-00001" summary="113">
       <created>1488889155525</created>
@@ -568,11 +578,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489850258734</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="113">
+      <created>1489893996873</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1489893996873</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110081000" />
+    <option name="totallyTimeSpent" value="111383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -611,13 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/leetcode/187. Repeated DNA Sequences.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/super/95. Unique Binary Search Trees II.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
@@ -982,11 +992,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leetcode/61. Rotate List.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state relative-caret-position="308">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/自我介绍.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
