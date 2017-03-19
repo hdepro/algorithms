@@ -9,22 +9,27 @@
 
 var longestPalindrome = function(s) {
     let len=s.length;
-    let k=0,i=0,j=0,tempi=0,tempj=0,start=0,end=0,max=1;
+    let k=0,i=0,j=0,start=0,end=0;
     while(k<len){
         i=k,j=k+1;
-        tempi=k,tempj=k;
         while(i>=0&&j<len){
             if(s[i]!=s[j]) break;
-            if((j-i)%2){
-                tempi=i--;
-            }else{
-                tempj=j++;
-            }
+            i--;
+            j++;
         }
-        if(tempj-tempi+1>max){
-            max=tempj-tempi+1;
-            start=tempi;
-            end=tempj;
+        if(j-i-2>end-start){
+            start=i+1;
+            end=j-1;
+        }
+        i=k-1,j=k+1;
+        while(i>=0&&j<len){
+            if(s[i]!=s[j]) break;
+            i--;
+            j++;
+        }
+        if(j-i-2>end-start){
+            start=i+1;
+            end=j-1;
         }
         k++;
     }
