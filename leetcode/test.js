@@ -221,6 +221,9 @@ console.log(arr3);}
     console.log(undefined>0);
 }
 
+console.log("9"+"90");
+
+
 
 
 

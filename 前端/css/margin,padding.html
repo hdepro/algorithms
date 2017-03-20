@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .inline-padding>*{
+            background:red;
+        }
+        .padding{
+            margin:10px 0px 10px 0px;
+            padding:10px 0px 10px 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="inline-padding">
+    <span>我是行内span元素</span>
+    <span class="padding">我是有padding的行内span元素</span>
+    <strong>我是行内strong元素</strong>
+    <strong class="padding">我是有padding的行内strong元素</strong><br/>
+    <span>我是行内span元素</span>
+    <span class="padding">我是有padding的行内span元素</span>
+    <strong>我是行内strong元素</strong>
+    <strong class="padding">我是有padding的行内strong元素</strong>
+    <!--行内元素设置padding-top和padding-bottom不会增加行高，设置margin-top没有用-->
+</div>
+<div class="negative-margin">
+    <p style="margin-top:-10px">
+        <span style="margin-left:-10px">aaaaaaaa</span>
+        <span>bbbbbbbb</span>
+    </p>
+    <p style="margin-bottom:-10px">
+        <span style="margin-right:-10px">aaaaaaaa</span>
+        <span>bbbbbbbb</span>
+    </p>
+    <p>
+        <span>cccccccc</span>
+        <span>dddddddd</span>
+    </p>
+</div>
+<div>
+    <div id="mydiv1" style="float:left">First</div>
+    <div id="mydiv2">Second</div>
+</div>
+<div style="/*overflow:hidden*/">
+    <div id="mydiv3" style="float:left;margin-right:20px">third</div>
+    <div id="mydiv4" style="float:left">fourth</div>
+</div>
+<div>
+    <div id="mydiv5" style="float:left;margin-right:20px;">fifth</div>
+    <div id="mydiv6" style="clear:both">sixth</div>
+</div>
+</body>
+</html>

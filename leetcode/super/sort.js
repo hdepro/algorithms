@@ -179,4 +179,4 @@ const mergeSort=function(nums){
 };
 
 console.log("mergeSort = " + mergeSort([2,4,3,5]));
-//console.log("mergeSort = " + mergeSort([2,3,5,6,8,1,4,5,6,9,7,4,8,10,11,12,13,14,15,3,7]));
+console.log("mergeSort = " + mergeSort([2,3,5,6,8,1,4,5,6,9,7,4,8,10,11,12,13,14,15,3,7]));
