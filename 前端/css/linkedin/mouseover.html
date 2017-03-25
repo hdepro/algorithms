@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .thumbnail{
+            position:relative;
+            width:300px;
+        }
+        .thumbnail>img{
+            width:100%;
+        }
+        .thumbnail>#slide-square{
+            top:0px;
+            left:0px;
+            position:absolute;
+            background:orange;
+            opacity:0;
+            width:100px;
+            height:100px;
+            z-index:1000;
+        }
+        .thumbnail:hover>#slide-square{
+            opacity:0.4;
+        }
+
+        #hd-map{
+            width:400px;
+            height:400px;
+            overflow:hidden;
+        }
+        #hd-map>img{
+            width:1200px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="thumbnail">
+        <img src="../../image/ml.jpeg">
+        <div id="slide-square"></div>
+    </div>
+    <div id="hd-map">
+        <img src="../../image/ml.jpeg">
+    </div>
+</div>
+<script>
+    const square_width=100,square_height=100;
+    const node = document.getElementsByClassName("thumbnail").item(0);
+    node.addEventListener("mousemove",handleMouseOver(10),false);
+    const slide_square = document.getElementById("slide-square");
+    const showNode = document.getElementById("hd-map").firstElementChild;
+    function handleMouseOver(delay){
+        //console.dir(event);
+        let timer;
+        return function(event){
+            let self = this,args=arguments;
+            clearTimeout(timer);
+            timer=setTimeout(function(){
+                var left=0,top=0;
+                if(event.target.nodeName == "IMG" || event.target.id == "slide-square"){
+                    const {offsetWidth,offsetHeight} = node.firstElementChild;
+                    //print(event);
+                    console.log("pageX = "+event.pageX);
+                    console.log("pageY = "+event.pageY);
+                    console.log("offsetWidth = "+offsetWidth);
+                    if((event.pageX+square_width/2)>offsetWidth){
+                        left = offsetWidth-square_width;
+                    }else if(event.pageX<(square_width/2)){
+                        left=0;
+                    }else{
+                        left = event.pageX - square_width/2;
+                    }
+                    if((event.pageY+square_height/2)>offsetHeight){
+                        top = offsetHeight-square_height;
+                    }else if(event.pageY<(square_height/2)){
+                        top=0;
+                    }else{
+                        top = event.pageY - square_height/2;
+                    }
+                    console.log(left,top);
+                    //slide_square.style.cssText+=`left:${left}px;top:${top}px`;
+                    slide_square.style.cssText += `transform:translate(${left}px,${top}px)`;
+                }
+
+                //showNode.style.cssText += `margin-left:${-left*4}px;margin-top:${-top*4}px`;
+                showNode.style.cssText += `transform:translate(${-left*4}px,${-top*4}px)`;
+            },delay);
+        }
+    };
+
+    function print(event){
+        console.group("start");
+        console.log("pageX = "+event.pageX);
+        console.log("clientY = "+event.clientY);
+        console.log("screenY = "+event.screenY);
+        console.log("offsetTop = "+event.target.offsetTop);    //相对于父元素的偏移量
+        console.log("offsetLeft = "+event.target.offsetLeft);
+        console.log("offsetWidth = "+event.target.offsetWidth);  //元素的宽度
+        console.log("offsetHeight = "+event.target.offsetHeight);
+        console.group("end");
+    }
+</script>
+</body>
+</html>
