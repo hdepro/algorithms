@@ -30,7 +30,7 @@
         <span style="margin-left:-10px">aaaaaaaa</span>
         <span>bbbbbbbb</span>
     </p>
-    <p style="margin-bottom:-10px">
+    <p style="margin-bottom:-20px">
         <span style="margin-right:-10px">aaaaaaaa</span>
         <span>bbbbbbbb</span>
     </p>
@@ -40,16 +40,48 @@
     </p>
 </div>
 <div>
-    <div id="mydiv1" style="float:left">First</div>
-    <div id="mydiv2">Second</div>
+   <div style="background:silver">
+       <p style="margin:20px 0px">我是没有边  框的父元素的P</p>
+   </div>
+    <div style="border:1px solid;background:silver">
+        <p style="margin:20px 0px">我是有边框的父元素的P</p>
+    </div>
+    <div style="padding:1px;background:silver">
+        <p style="margin:20px 0px">我是有padding的父元素的P</p>
+    </div>
 </div>
-<div style="/*overflow:hidden*/">
-    <div id="mydiv3" style="float:left;margin-right:20px">third</div>
-    <div id="mydiv4" style="float:left">fourth</div>
+<div id="margin-collapse">
+    <div style="background:silver">
+        <p style="margin:20px 0px">我是没有边框的父元素的P</p>
+        <p style="margin:20px 0px">我是没有边框的父元素的P</p>
+        <p style="margin:20px 0px">我是没有边框的父元素的P</p>
+    </div>
+    <div style="border:1px solid;background:silver">
+        <p style="margin:20px 0px">我是有边框的父元素的P</p>
+        <p style="margin:20px 0px">我是有边框的父元素的P</p>
+        <p style="margin:20px 0px">我是有边框的父元素的P</p>
+    </div>
+    <div>
+        <ul style="margin-bottom:-15px">
+            <li style="margin-bottom:20px">a list item</li>
+            <li style="margin-bottom:20px">another list item</li>
+        </ul>
+        <h1 style="margin-top:-18px">a heading 1</h1>
+    </div>
 </div>
 <div>
-    <div id="mydiv5" style="float:left;margin-right:20px;">fifth</div>
-    <div id="mydiv6" style="clear:both">sixth</div>
+    <p style="background:silver;border-style:solid;border-width:50px">this is a p element</p>
+</div>
+<div style="width:400px">
+    <p>aaaaaaaaaaaaaaaaaaaa
+        <strong style="border-left:25px double gray;background:silver">我来测试一下行内元素的边框</strong>
+        bbbb bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+    <p>aaaaaaaaaaaaaaaaaaaa
+        <strong style="margin:0 25px;background:silver">我来测试一下行内元素的边框</strong>
+        bbbb bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+    <p>aaaaaaaaaaaaaaaaaaaa
+        <strong style="padding:0 25px;background:silver">我来测试一下行内元素的边框</strong>
+        bbbb bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
 </div>
 </body>
 </html>
