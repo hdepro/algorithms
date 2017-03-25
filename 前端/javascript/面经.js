@@ -1,6 +1,9 @@
 /**
  * Created by heben on 2017/3/20.
  */
+
+//1.实现lodash的debounce函数
+
 function cb(timer){
     console.log(new Date().getTime());
 }
@@ -31,5 +34,7 @@ function debounce(callback,delay){
 
     }
 }
+
+
 
 
