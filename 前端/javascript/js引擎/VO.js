@@ -26,7 +26,7 @@ var ECG={};         //全局执行环境;
 ECStack.push(ECG);
 ECStack.pop();
 
-EcStack=[
+ECStack=[
     ECG={           //全局执行环境
         VOG:{       //全局变量对象
             ...,    //全局对象原有属性
@@ -40,52 +40,52 @@ EcStack=[
 
 //二.执行函数A
 
-EcStack=[
-    ECA={
-        scope:VOG,
-        AOA:{      //函数A的活动对象
-            y:1,
-            x:2,
-            B:function(){},
-            //B[[scope]]:this,
-            arguments:[],
-            this:window
-        },
-        scopeChain:<AOA,VOG>    //作用域链
-    },
-    ECG={           //全局执行环境
-        VOG:{       //全局变量对象
-            ...,    //全局对象原有属性
-            x:1,
-            A:function(){},
-            //A[[scope]]:this     //内部属性指向VOG
-        }
-    }
-];
+// ECStack=[
+//     ECA={
+//         scope:VOG,
+//         AOA:{      //函数A的活动对象
+//             y:1,
+//             x:2,
+//             B:function(){},
+//             //B[[scope]]:this,
+//             arguments:[],
+//             this:window
+//         },
+//         scopeChain:<AOA,VOG>    //作用域链
+//     },
+//     ECG={           //全局执行环境
+//         VOG:{       //全局变量对象
+//             ...,    //全局对象原有属性
+//             x:1,
+//             A:function(){},
+//             //A[[scope]]:this     //内部属性指向VOG
+//         }
+//     }
+// ];
 
 
 //三.执行函数B
-EcStack=[
-    ECB={
-        scope:AOA,
-        AOB:{      //函数B的活动对象
-            z:1,
-            B:function(){},
-            //B[[scope]]:this,
-            arguments:[],
-            this:window
-        },
-        scopeChain:<AOB,AOA,VOG>    //作用域链
-    },
-    ECG={           //全局执行环境
-        VOG:{       //全局变量对象
-            ...,    //全局对象原有属性
-            x:1,
-            A:function(){},
-            //A[[scope]]:this     //内部属性指向VOG
-        }
-    }
-];
+// ECStack=[
+//     ECB={
+//         scope:AOA,
+//         AOB:{      //函数B的活动对象
+//             z:1,
+//             B:function(){},
+//             //B[[scope]]:this,
+//             arguments:[],
+//             this:window
+//         },
+//         scopeChain:<AOB,AOA,VOG>    //作用域链
+//     },
+//     ECG={           //全局执行环境
+//         VOG:{       //全局变量对象
+//             ...,    //全局对象原有属性
+//             x:1,
+//             A:function(){},
+//             //A[[scope]]:this     //内部属性指向VOG
+//         }
+//     }
+// ];
 
 //变量的解析过程，从作用域链的顶端开始找
 

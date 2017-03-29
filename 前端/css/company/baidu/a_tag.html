@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a[href]{
+            color:blue;
+        }
+        a:hover{
+            color:red;
+        }
+        a:nth-child(2n+1){
+            color:green;
+        }
+        a[href^="www.baidu.com"]:after{
+            content:"↗";
+        }
+        a[href^="www.baidu.com"]{
+            direction:rtl;
+        }
+    </style>
+</head>
+<body>
+<a href="www.baidu.com/a">测试lvha</a>
+<a href="www.baidu.com/b">测试2</a>
+<a href="www.baidu.com">测试3</a>
+<a href="www.baidu.com">测试4</a>
+<a href="www.baidu.com">测试5</a>
+<a href="www.jd.com">测试6</a>
+<a href="www.jd.com">测试7</a>
+</body>
+</html>
