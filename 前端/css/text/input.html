@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #form{
+            width:33%;
+        }
+        p{
+            font-size:12px;
+        }
+        #text1{
+            width:100%;
+            border:1px solid #aaa;
+        }
+        .required{
+            color:red;
+        }
+        .char-num{
+            float:right;
+        }
+        .warning{
+            color:red;
+            display:none;
+        }
+        .radius{
+            display:inline-block;
+            width:12px;
+            height:12px;
+            background:red;
+            color:white;
+            border-radius:50%;
+            text-align:center;
+            margin-right:6px;
+            line-height:12px;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function handleChange(){
+        var num = document.getElementById("text1").value.length;
+        document.querySelector(".char-num").innerText = "("+num+"/200)";
+        if(num>8){
+            document.querySelector(".warning").style.display='block';
+        }else{
+            document.querySelector(".warning").style.display='none';
+        }
+    }
+</script>
+<form id="form">
+    <p><span class="required">*&nbsp;&nbsp;</span>请填写备注<span class="char-num">(0/200)</span></p>
+    <textarea id="text1" rows="4" placeholder="最多输入200个字符" onkeyup="handleChange()"></textarea>
+    <p class="warning"><span class="radius">x</span>亲，此项内容填写长度不能超过200个字符哦</p>
+</form>
+</body>
+</html>

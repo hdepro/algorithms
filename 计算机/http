@@ -70,3 +70,11 @@ HTTP协议之上.
 
 7.各种变量，常量分别在哪个内存区域？
 
+8.csrf,xss
+CSRF:
+1.验证HTTP Referer字段,在HTTP头中有一个字段叫Referer，它记录了该HTTP请求的来源地址。
+2.在请求地址中添加token并验证
+3.网站验证码
+XSS：
+对输入进行转换，不接受DOM式的非法输入
+
