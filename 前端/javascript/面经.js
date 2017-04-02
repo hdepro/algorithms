@@ -18,8 +18,8 @@ function debounce_test(callback,time){
 }
 
 const deboun = debounce_test();
-deboun();
-deboun();
+// deboun();
+// deboun();
 
 
 function debounce(callback,delay){
@@ -31,10 +31,23 @@ function debounce(callback,delay){
         timer = setTimeout(function(){
             callback.apply(self,args);
         },delay);
-
     }
 }
 
+//2.实现一个once函数
+function once(callback){
+    var flag=true;
+    return function(){
+        if(flag) {
+            callback && callback();
+            flag=false;
+        }
+    }
+}
+
+const once1 = once(()=>{console.log(1)});
+once1();
+once1();
 
 
 
