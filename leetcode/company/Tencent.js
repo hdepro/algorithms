@@ -40,10 +40,10 @@ function tree(K,arr){
             return compare;
         }
         if(compare < arr[0]){
-            compare -= Math.pow(2,i);
+            compare += Math.pow(2,i);
         }
         if(compare > arr[len-1]){
-            compare += Math.pow(2,i);
+            compare -= Math.pow(2,i);
         }
     }
 }
