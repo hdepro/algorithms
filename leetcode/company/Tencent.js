@@ -32,7 +32,8 @@ function tree(K,arr){
     arr.sort((a,b)=>a-b);
     let i=K-1,len=arr.length;
     let compare = Math.pow(2,i);
-    while(--i){
+    i=i-1;
+    while(true){
         if(compare > arr[0] && compare < arr[len-1]){
             return compare;
         }
@@ -45,6 +46,7 @@ function tree(K,arr){
         if(compare > arr[len-1]){
             compare -= Math.pow(2,i);
         }
+        i--;
     }
 }
 console.log(tree(4,[1,2,3]));
