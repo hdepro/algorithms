@@ -63,3 +63,35 @@ console.log(integer_decomposition3(15));
 console.log(integer_decomposition3(16));
 console.log(integer_decomposition3(17));
 console.log(integer_decomposition3(18));
+
+
+function getIndex(num){
+    let i=0;
+    while(true){
+        if(num % 2==0) i++;
+        else break;
+        num = parseInt(num/2);
+    }
+    return i;
+}
+
+function tree(K,arr){
+    arr.sort((a,b)=>a-b);
+    let i=K-1,len=arr.length;
+    let compare = Math.pow(2,i);
+    i=i-1;
+    while(true){
+        if(compare >= arr[0] && compare <= arr[len-1]){
+            return compare;
+        }
+        if(compare < arr[0]){
+            compare += Math.pow(2,i);
+        }
+        if(compare > arr[len-1]){
+            compare -= Math.pow(2,i);
+        }
+        i--;
+    }
+}
+console.log(tree(4,[1,2,3]));
+console.log(tree(4,[12,15,13]));
