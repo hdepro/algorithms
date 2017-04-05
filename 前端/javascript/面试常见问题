@@ -137,4 +137,14 @@ c.jsonp是被老浏览器支持，cors是新方法
         部分动画功能无法实现（如滚动动画，视差滚动等）
 
 
+html页面显示过程
+    解析HTML，并生成一棵DOM tree
+    解析各种样式并结合DOM tree生成一棵Render tree
+    对Render tree的各个节点计算布局信息，比如box的位置与尺寸
+    根据Render tree并利用浏览器的UI层进行绘制流程。
+其中，第三步，对render tree的各个结点计算布局信息为时间占用较大的一部分，而在这一步中，包含了layout，layout操作，是对render tree中对象的大小、
+尺寸进行计算，在默认情况下，浏览器的layout为lazy模式，也就是说，并非每次我们对DOM进行修改时都会layout，而是将这些修改存储在一个队列中，
+在一定的情况下统一提交队列，进而实现layout操作。
+
+
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .border-colors{
+            display:inline-block;
+            border-width:50px;
+            border-style:solid;
+            border-color:red blue green yellow;
+            width:0px;
+            margin-left:50px;
+        }
+        .border-triangle{
+            display:inline-block;
+            border-width:50px;
+            border-style:solid;
+            border-color:red transparent transparent;
+            width:0px;
+            margin-left:50px;
+        }
+
+        .border-echelon{    /*梯形*/
+            display:inline-block;
+            border-width:50px;
+            border-style:solid;
+            border-color:red blue green yellow;
+            width:50px;
+            height:50px;
+            margin-left:50px;
+        }
+
+        .border-parallelogram{    /*平行四边形*/
+            margin-left:100px;
+            display:inline-block;
+            padding:0 40px;
+            background:green;
+            height:50px;
+            position:relative;
+            line-height:50px;
+        }
+        .border-parallelogram:before{   /*before后的元素是作为border-parallelogram的子元素，也会继承它的字体等属性*/
+            content:'';
+            border-width:25px;
+            border-style:solid;
+            position:absolute;
+            left:-50px;
+            border-color:transparent red red transparent;
+            width:0px;
+        }
+        .border-parallelogram:after{
+            content:'';
+            border-width:25px;
+            border-style:solid;
+            position:absolute;
+            right:-50px;
+            border-color:red transparent transparent red;
+            width:0px;
+        }
+
+        .transform-parallelogram{
+            margin-left:100px;
+            display:inline-block;
+            padding:0 50px;
+            height:50px;
+            line-height:50px;
+            background:brown;
+            transform:skew(20deg);
+        }
+        .transform-parallelogram>span{
+            display:inline-block;        /*transform对行内元素无效*/
+            transform:skew(-20deg);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="border-colors"></div>
+    <div class="border-triangle"></div>
+    <div class="border-echelon"></div>
+    <div class="border-parallelogram">北京</div>
+    <div class="transform-parallelogram"><span>北京</span></div>
+</div>
+</body>
+</html>
