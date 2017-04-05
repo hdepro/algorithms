@@ -37,3 +37,12 @@ console.log("num < NaN = "+(num<NaN));
 console.log("NaN == NaN = "+(NaN==NaN));
 console.log("null == undefined = "+(null == undefined));
 console.log("null == 0 = "+(null == 0));
+
+console.log(1+"2"+"2");
+console.log(1+ +"2"+"2");
+console.log(1+-"1"+"2");
+console.log(+"1"+"2"+"2");
+console.log("A"-"B"+"2");
+console.log("A"-"B"+2);
+
+console.log(0&&2||1);
