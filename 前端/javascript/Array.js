@@ -33,5 +33,10 @@ function testFunc(){
 
 testFunc(1,2,3);
 
-
+var arr1="john".split('');
+var arr2=arr1.reverse();
+var arr3="jones".split('');
+console.log("arr1 = "+arr1+" arr2 = "+arr2+" arr3 = "+arr3);
+arr2.push(arr3);
+console.log("arr1 = "+arr1+" arr2 = "+arr2+" arr3 = "+arr3);
 

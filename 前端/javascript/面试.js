@@ -78,4 +78,31 @@ console.log(newObject);
 // obj.__proto__ = Base.prototype;
 // Base.call(obj);
 
+//实现一个函数，add(1)(2)=3,add(1,2,3)(10)=16,add(1)(2)(3)(4)(5)=15
+
+const test1=function(){
+    console.log(1);
+};
+console.log(test1);
+test1.valueOf=function(){
+    return 2;
+};
+console.log(test1);
+
+function add(){
+    const arr = Array.prototype.slice.call(arguments,0);
+    let fn=function(){
+        const arrf = Array.prototype.slice.call(arguments,0);
+        return add.apply(null,arr.concat(arrf));
+    };
+    fn.valueOf=function(){
+        console.log("调用了valueOf");
+        return arr.reduce((a,b)=>(a+b));
+    };
+    return fn;
+}
+console.log(add(1)(2));
+console.log(add(1,2,3)(10));
+console.log(add(1)(2)(3));
+
 
