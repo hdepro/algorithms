@@ -78,3 +78,5 @@ CSRF:
 XSS：
 对输入进行转换，不接受DOM式的非法输入
 
+session.cache_limiter参数，军哥lnmp默认值是nocache，只要修改为none即可解决这个HTTP状态中的缓存问题。
+
