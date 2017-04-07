@@ -2,6 +2,7 @@
  * Created by heben on 2017/3/25.
  */
 
+
 // var line;
 // while(line=read_line()){
 //     var arr=line.split(' ');
@@ -15,100 +16,45 @@
 //     print(sum.toFixed(2));
 // }
 
-// function maxSequence(n,arr){
-//     var left=-1,right=-1,flag=1,lTemp=0;
-//     for(var i=1;i<n;i++){
-//         if(flag){
-//             if(arr[i]<arr[i-1]){
-//                 flag=0;
-//                 if(i-lTemp>Math.max(1,right-left)){
-//                     left=lTemp;
-//                     right=i;
-//                 }
-//             }
-//         }else{
-//             if(arr[i]>arr[i-1]){
-//                 if(i-1-lTemp>Math.max(1,right-left)){
-//                     left = lTemp;
-//                     right = i-1;
-//                 }
-//                 lTemp=i-1;
-//                 flag=1;
-//             }else{
-//                 if(i-lTemp>Math.max(1,right-left)){
-//                     left=lTemp;
-//                     right=i;
-//                 }
-//             }
-//         }
+function maxIncome(n,m,arr){
+    var max = 0,res=0;
+    arr.sort(function(a,b){
+        return a-b;
+    });
+    console.log(arr);
+    var start = Math.max(m-n,0);
+    for(var i=start;i<m;i++){
+        var value = arr[i]*(m-i);
+        if(value>max){
+            max = value;
+            res = arr[i];
+        }
+    }
+    return res;
+}
+console.log(maxIncome(5,4,[2,8,10,7]));
+console.log(maxIncome(5,6,[5,8,10,7,6,9]));
+console.log(maxIncome(9,7,[2,4,6,4,9,7,7]));
+console.log(maxIncome(9,7,[1,1,1,1,1,1,8]));
+console.log(maxIncome(7,4,[9,8,7,5]));
+console.log(maxIncome(2,5,[1,6,1,1,13]));
+console.log(parseInt(1000000));
+
+
+
+// function maxStack(n,k){
+//     var m = parseInt(n/k);
+//     var mod = n%k;
+//     var i=0;
+//     while(true){
+//         if(mod+i*k>=parseInt((m-i)/2)) break;
+//         i++;
 //     }
-//     return [left,right];
+//     return m-i;
 // }
-//
-// console.log(maxSequence(2,[1,2]));
-// console.log(maxSequence(2,[3,2]));
-// console.log(maxSequence(3,[1,2,1]));
-// console.log(maxSequence(9,[1,3,2,1,4,2,6,8,7]));
-// console.log(maxSequence(10,[1,3,1,2,5,4,3,1,9,10]));
+// console.log(maxStack(5,1));
+// console.log(maxStack(4,2));
+// console.log(maxStack(2,1));
+// console.log(maxStack(5,2));
+// console.log(maxStack(1000000000,1));
 
-
-
-
-
-
-function g(arrs){
-    var arr = arrs.map(function(a){return a.toUpperCase()});
-    var n=arr.length;
-    var i=0,j=n-1;
-
-    function swap(arr,i,j){
-        var temp=arr[i];
-        arr[i]=arr[j];
-        arr[j]=temp;
-    }
-
-    while(i<j){
-        if(arr[i]==arr[i+1]){
-            swap(arr,i+1,j--);
-        }else{
-            i++;
-        }
-    }
-    return arr.slice(0,j+1);
-}
-
-
-function f(n,m,arrn1,arrm){
-    var result=[],res=0,count=0,max=0;
-    for(var i=0;i<n;i++){
-        var arrn = arrn1.map(function(arrns){
-            return g(arrns.sort(function(a,b){
-                return a- b;
-            }))
-        })
-    }
-    for(var k=0;k<m;k++){
-        var arrms = g(arrm[k].sort(function(a,b){return a- b;}));
-        var mslen = arrms.length;
-        result.push(arrn[0]);
-        max=0;
-        for(var s=0;s<n;s++){
-            var arrns=arrn[s];
-            var nslen = arrns.length;
-            var i=0,j=0;
-            while(i<mslen&&j<nslen){
-                if(arrms[i]>arrns[j]){
-                    j++;
-                }else if(arrms[i]<arrns[j]){
-                    i++;
-                }else{
-                    i++;j++;count++;
-                }
-            }
-            if(count>max){
-                result.push(arrns);
-            }
-            count=0;
-        }
-    }
-}
