@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="./jquery-3.2.0.js"></script>
+<div id="tooltip">
+    <p><a href="#" class="tooltip" title="这是我的超链接提示1.">提示1.</a></p>
+    <p><a href="#" class="tooltip" title="这是我的超链接提示2.">提示2.</a></p>
+    <p><a href="#" title="只是自带的提示1.">自带提示1.</a></p>
+    <p><a href="#" title="只是自带的提示2.">自带提示2.</a></p>
+</div>
+<script>
+    $('a.tooltip').mouseover(function(event){
+        let title = this.title;
+        this.myTitle = title;
+        this.title = '';
+        let tooltip = '<div id="tip">'+title+'</div>';
+        $(tooltip).appendTo($(document.body));
+        $('#tip').css({
+            top:event.pageY+'px',
+            left:event.pageX+'px'
+        });
+    }).mouseout(function(event){
+        $('#tip').remove();
+        this.title = this.myTitle;
+    })
+</script>
+</body>
+</html>
