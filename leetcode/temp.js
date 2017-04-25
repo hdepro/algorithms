@@ -58,3 +58,27 @@ console.log(parseInt(1000000));
 // console.log(maxStack(5,2));
 // console.log(maxStack(1000000000,1));
 
+
+function sum(){
+    var args = Array.prototype.slice.call(arguments,0);
+    var n=arguments.length,bit=0,sum=0;
+    for(var i=0;i<n;i++){
+        if(typeof args[i] == 'string' || typeof args[i] == 'number'){
+            var num = parseFloat(args[i]).toString();
+            if(num == "NaN") continue;
+            var bit = Math.max(bit,num.length-2);
+            sum += parseFloat(num);
+        }
+    }
+    return sum.toFixed(bit);
+}
+
+// Should equal 15
+console.log(sum(1, 2, 3, 4, 5));
+// Should equal 0
+console.log(sum(5, null, -5));
+// Should equal 10
+console.log(sum('1.0', false, 1, true, 1, 'A', 1, 'B', 1, 'C', 1, 'D', 1,
+    'E', 1, 'F', 1, 'G', 1));
+// Should equal 0.3, not 0.30000000000000004
+console.log(sum(0.1, 0.2));

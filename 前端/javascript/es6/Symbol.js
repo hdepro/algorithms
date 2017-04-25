@@ -39,3 +39,21 @@ console.log([1,2,3,4,3,5,4,5].map(a=>{
 
 //Promise的缺点：一旦创建无法取消，如果不设置回调函数，Promise内部抛出的错误不会反映到外部；
 // 处于pending状态时无法得知到了那一步。
+
+const [_x, _y] = [Symbol('_x'), Symbol('_y')];
+class Point{
+    constructor(x, y){
+        this[_x] = x;
+        this[_y] = y;
+    }
+    get length(){
+        const x = this[_x],
+            y = this[_y];
+
+        return Math.sqrt(x * x + y * y);
+    }
+}
+
+let p = new Point(3, 4);
+console.log(p._x, p._y, p.length);
+

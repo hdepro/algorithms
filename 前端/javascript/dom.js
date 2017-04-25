@@ -7,8 +7,11 @@
 
 //cssText方式是为元素应用多项变化最快的方式，可以一次行应用所有变化
 
-//offsetHeight表示元素在垂直方向上占用空间的大小，以像素计，包括滚动条和边框
-//clientHeight表示元素在垂直方向上内边距以及元素内容占用空间大小，以像素计，不包括滚动条和边框
+//offsetHeight表示元素在垂直方向上占用空间的大小，以像素计，包括滚动条和边框(可以看到的高度)
+//clientHeight表示元素在垂直方向上内边距以及元素内容占用空间大小，以像素计，不包括滚动条和边框(可以看到的高度)
+//scrollHeight表示元素的实际高度，一般等于clientHeight,出现滚动条的时候会大于clientHeight(元素的高度)
+//window.innerHeight表示浏览器显示文档区域在屏幕中占有的高度，浏览器窗口resize或者console查看元素都会使得其改变
+//window.screen.availHeight表示显示屏幕的高度,是不会变的
 
 function stopBubble(e){
     var event = e||window.event;

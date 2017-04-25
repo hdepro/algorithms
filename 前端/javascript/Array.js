@@ -40,3 +40,7 @@ console.log("arr1 = "+arr1+" arr2 = "+arr2+" arr3 = "+arr3);
 arr2.push(arr3);
 console.log("arr1 = "+arr1+" arr2 = "+arr2+" arr3 = "+arr3);
 
+console.log(Array.prototype.slice.call({0:'a',1:'b',length:1}));
+console.log(Array.prototype.slice.apply([],{0:'a',1:'b'}));
+console.log(Array.prototype.concat.apply([],{0:'a',1:'b'}));
+

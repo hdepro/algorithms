@@ -12,8 +12,8 @@ Array.prototype.reduce2=function(func){
     return a;
 };
 
-console.log([1,2,3].reduce((a,b)=>(a*b)));
-console.log([1,2,3].reduce2((a,b)=>(a-b)));
+// console.log([1,2,3].reduce((a,b)=>(a*b)));
+// console.log([1,2,3].reduce2((a,b)=>(a-b)));
 
 const arr=new Array();
 console.log(arr instanceof Array);
@@ -27,6 +27,10 @@ console.log(arr.__proto__.constructor === Object);
 console.log(arr.constructor === Array.prototype.constructor);
 console.log(arr.constructor === Object.prototype.constructor);
 console.log(Array.prototype.constructor === Array);
+console.log("Object.getPrototypeOf(arr) === Array.prototype "+(Object.getPrototypeOf(arr) === Array.prototype));
+console.log("Array.prototype.isPrototypeOf(arr) "+Array.prototype.isPrototypeOf(arr));
+console.log("Object.prototype.isPrototypeOf(arr) "+Object.prototype.isPrototypeOf(arr));
+
 
 function A(){
     const obj = new Object();

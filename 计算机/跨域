@@ -1,0 +1,4 @@
+1.cors方式
+Access-Control-Allow-Origin
+Access-Control-Allow-Credentials
+Access-Control-Expose-Headers

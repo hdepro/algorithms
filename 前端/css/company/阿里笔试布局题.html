@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*float元素设置vertical-align不起作用的，因为vertical-align只适用于在文档流中的元素*/
+    </style>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        #header{
+            border:1px solid green;
+            height:100px;
+            padding:10px;
+        }
+        #logo{
+            display:inline-block;
+            width:80px;
+            height:80px;
+            border:1px solid red;
+        }
+        #header>input{
+            direction:rtl;
+            float:right;
+            vertical-align:bottom;
+        }
+        #aside{
+            float:right;
+            width:200px;
+            margin-left:30px;
+            border:1px solid red;
+        }
+        #content{
+            border:1px solid blue;
+            height:500px;
+            overflow:hidden;
+        }
+        #footer{
+            text-align:center;
+            border:2px solid #000;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="header">
+        <img id="logo" alt="Logo"/>
+        <input type="text" placeholder="用户名"/>
+    </div><br/>
+    <div>
+        <div id="aside">aside - 定宽 200px</div>
+        <div id="content">content - 自适应宽度</div>
+    </div><br/>
+    <div id="footer">footer</div>
+</div>
+</body>
+</html>

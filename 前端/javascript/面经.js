@@ -49,5 +49,25 @@ const once1 = once(()=>{console.log(1)});
 once1();
 once1();
 
+//实现一个节流阀
+function throttle(callback,delay){
+    let last,timer;
+    return function(){
+        var self = this;
+        var args = arguments;
+        var now  = Date.now();  //+new Date()
+        if(last && now<last+delay){
+            last = now;
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+                callback.apply(self,args)
+            },delay)
+        }else{
+            last = now;
+            callback.apply(self,args);
+        }
+    }
+}
+
 
 

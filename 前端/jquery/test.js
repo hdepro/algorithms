@@ -7,3 +7,5 @@ let arr = Object([1,2,3]);
 console.log(objArr);
 console.log(arr);
 console.log(!undefined);
+
+

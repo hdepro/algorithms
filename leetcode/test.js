@@ -223,6 +223,13 @@ console.log(arr3);}
 
 console.log("9"+"90");
 
+{let obj1={0:'a',1:'b',length:2};
+let arr1 = Array.prototype.slice.call(obj1,0);
+console.log(obj1);
+console.log(arr1);
+}
+
+
 
 
 
