@@ -56,3 +56,7 @@ console.log("寄生模式-------------------------------------");
     person1.sayName();
     console.log(person1.constructor == Person);
 })();
+
+
+
+
