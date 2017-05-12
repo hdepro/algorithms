@@ -80,5 +80,22 @@ sayName();
 
 
 
+function A(a){
+    this.a = a;
+}
+A.prototype.func = function(){console.log(this.a)};
 
+function B(){
+    //A.call(this,"ab");
+    this.b = "b";
+}
+
+B.prototype = new A("ba");
+let b = new B();
+
+console.log(A.prototype.isPrototypeOf(b));
+console.log(B.prototype.isPrototypeOf(b));
+console.log(B.prototype === Object.getPrototypeOf(b));
+console.log(A.prototype === Object.getPrototypeOf(b));
+b.func();
 

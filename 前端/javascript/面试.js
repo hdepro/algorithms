@@ -108,5 +108,10 @@ function add(){
 console.log(add(1)(2));
 console.log(add(1,2,3)(10));
 console.log(add(1)(2)(3));
+console.log(undefined == null);
+console.log(Boolean("0"),Boolean("[]"),Boolean("[0]"),Boolean([]),Boolean(""),Boolean(null),Boolean(undefined));
+console.log(Number("[]"),Number("[0]"),Number([]),Number([0]),Number(""),Number(null),Number(undefined));
+console.log([] == false,[0] == false,"0" == false,null == false,undefined == false);
+console.log(null == 0,undefined == 0,[0] == 0);
 
 

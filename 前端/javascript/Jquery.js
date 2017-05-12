@@ -11,5 +11,5 @@ function removeClass(el,className){
     return el.className;
 };
 
-var el={className:"ab bc cd"};
-console.log(removeClass(el,"ab"));
+var el={className:"ab bc cd cde"};
+console.log(removeClass(el,"ab cd"));

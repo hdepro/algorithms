@@ -16,6 +16,7 @@
 //     print(sum.toFixed(2));
 // }
 
+
 function maxIncome(n,m,arr){
     var max = 0,res=0;
     arr.sort(function(a,b){
