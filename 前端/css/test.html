@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .slidebox {
+            height: 100px;
+            width: 250px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid gray;
+        }
+        .slide {
+            height: 100px;
+            width: 250px;
+            position: absolute;
+            top: 0;
+        }
+        .slide:nth-of-type(1) {
+            background: red;
+            /*left: 0;*/
+        }
+        .slide:nth-of-type(2)  {
+            background: yellow;
+            /*left: 250px;*/
+        }
+        .slide:nth-of-type(3)  {
+            background: green;
+            /*left: 250px;*/
+        }
+        .slide:target {
+            /*left: 0;*/
+            z-index: 1;
+        }
+        .slidebox li {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            list-style-type: none;
+        }
+        .slidebox a{
+            display:inline-block;
+            background:greenyellow;
+            text-decoration: none;
+            padding:2px 6px;
+        }
+    </style>
+</head>
+<body>
+<div class="slidebox">
+    <div class="slide" id="slide1"></div>
+    <div class="slide" id="slide2"></div>
+    <div class="slide" id="slide3"></div>
+    <li>
+        <a href="#slide1">1</a>
+        <a href="#slide2">2</a>
+        <a href="#slide3">3</a>
+    </li>
+</div>
+</body>
+</html>
