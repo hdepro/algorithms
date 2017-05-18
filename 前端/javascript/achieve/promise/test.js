@@ -108,3 +108,11 @@ new Promise((resolve,reject)=>{
 }).then(data => {
     console.log(data);
 });
+
+new Promise((resolve,reject)=>{
+    if(){
+        resolve();
+    }else{
+        reject();
+    }
+});

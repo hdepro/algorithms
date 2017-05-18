@@ -115,3 +115,18 @@ console.log([] == false,[0] == false,"0" == false,null == false,undefined == fal
 console.log(null == 0,undefined == 0,[0] == 0);
 
 
+
+function passValue(obj){
+    obj.a = "aaa";
+}
+
+function passObject(obj){
+    obj = {a:'object'};
+}
+
+let obj = {a:'bbb'};
+console.log(obj);
+passValue(obj);
+console.log(obj);
+passObject(obj);
+console.log(obj);
