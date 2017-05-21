@@ -12,9 +12,8 @@ console.log("工厂模式-------------------------------------");
         obj.sayName = function () {
             console.log("name= " + this.name);
         };
-        return obj;
+           return obj;
     }
-
     const person1 = Person("heben1", 23);
     person1.sayName();
     console.log(person1.constructor == Person);
@@ -55,6 +54,8 @@ console.log("寄生模式-------------------------------------");
     const person1 = new Person("heben1", 23);
     person1.sayName();
     console.log(person1.constructor == Person);
+    console.log(person1 instanceof Person);
+    console.log(person1.__proto__ == Person.prototype);
 })();
 
 

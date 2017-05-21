@@ -53,3 +53,8 @@ console.log(test instanceof Function);
 const test2 = function(){};
 console.log(typeof test2);
 console.log(test2 instanceof Function);
+
+console.log(Object instanceof Object);
+console.log(Object.constructor === Object);
+console.log(Object.__proto__ === Object.prototype);
+console.log(Object.prototype.isPrototypeOf(Object));
