@@ -6,3 +6,8 @@ git fetch：相当于是从远程获取最新版本到本地，不会自动merge
 git pull：相当于是从远程获取最新版本并merge到本地
 
 
+3.git 常用命令
+git config -l
+git log 中发现已经commit的内容 heben.hb@hz.ali.com 邮箱不符合要求，请务必使用公司邮箱。
+git config user.email heben.hb@alibaba-inc.com   //没有用
+git commit --amend --author="heben.hb <heben.hb@alibaba-inc.com>"   //起作用

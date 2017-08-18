@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main"><button onclick="insert(this)">test</button></div>
+<script>
+    function insert(e){
+        let div = document.createElement("div");
+        div.style.background = "red";
+        div.style.width = "200px";
+        div.style.height = "200px";
+        e.parentNode.insertBefore(div,e);
+        setTimeout(()=>{
+            div.style.transition = "all linear 2s";
+            div.style.transform = "translate3D(100px,100px,0)";
+        });
+        /*div.style.transition = "all linear 2s";
+        div.style.transform = "translate3D(100px,100px,0)";*/
+    }
+</script>
+</body>
+</html>
