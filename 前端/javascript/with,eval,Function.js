@@ -30,3 +30,65 @@ function testEval2(){
 }
 testEval2();
 console.log(e2);
+
+var arr = [];
+for(var i=0;i<5;i++){
+    arr.push(function(){
+        return i*i;
+    });
+}
+console.log(arr[0](),arr[4]());
+
+var arr1 = [];
+for(let i=0;i<5;i++){
+    arr1.push(function(){
+        return i*i;
+    });
+}
+console.log(arr1[0](),arr1[4]());
+
+var arr2 = [];
+for(var i=0;i<5;i++){
+    arr2.push(()=>{
+        return i*i;
+    });
+}
+console.log(arr2[0](),arr2[4]());
+
+// async function async_test1(){
+//     console.log(new Date(),1);
+//     await new Promise((resolve,reject)=>{
+//         setTimeout(resolve,1000);
+//     });
+//     await console.log(new Date(),2);
+//     console.log(new Date(),3);
+// }
+// async_test1();
+
+// function *async_test2(){
+//     console.log(new Date());
+//     yield setTimeout(() => console.log(1),1000);
+//     yield console.log(new Date(),s);
+// }
+// async_test2().next();
+
+let sleep = [];
+
+for (var i = 0; i < 5; i++) {
+    ((j) => {
+        sleep.push(new Promise(function (resolve, reject) {
+
+            setTimeout(function () {
+                console.log(new Date, j);
+                resolve();
+            }, j * 1000)
+        }))
+    })(i)
+}
+// await只能使用在原生语法
+(async () => {
+    for (let item of sleep) {
+        await item
+    }
+    console.log(new Date(), i,"end");
+})();
