@@ -19,7 +19,7 @@ console.log(arr.reduce((a,b) => a+b));
 // (2)substr(字符串方法)方法，第一个参数指定开始位置，第二个参数指定截取长度 "123456".substring(2,4) = "3456",当参数为负数时，
 // 第一个负数参数加上长度，第二个负数参数转换成0
 
-//将arguments转换成数组
+//将arguments转换成数组    必须有length属性，否则就是空数组
 function testFunc(){
     console.log("arguments = "+JSON.stringify(arguments));
     console.log("arguments slice call arr = "+JSON.stringify(Array.prototype.slice.call(arguments)));
@@ -43,4 +43,6 @@ console.log("arr1 = "+arr1+" arr2 = "+arr2+" arr3 = "+arr3);
 console.log(Array.prototype.slice.call({0:'a',1:'b',length:1}));
 console.log(Array.prototype.slice.apply([],{0:'a',1:'b'}));
 console.log(Array.prototype.concat.apply([],{0:'a',1:'b'}));
+
+//如果一个元素是undefined，它不会在map遍历中出现
 

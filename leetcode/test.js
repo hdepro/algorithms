@@ -230,6 +230,16 @@ console.log(arr1);
 }
 
 
+console.log([1,2,3].every(i => i));
+let arrObj = [{a:1,b:2},{a:1,b:2}];
+let res = arrObj.map(ao => {
+    delete ao.b;
+    return ao;
+});
+console.log(res,arrObj);
+
+let objobj = {obj:{a:1}};
+console.log({...objobj});
 
 
 

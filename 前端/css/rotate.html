@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img:first-child{
+            transition:linear all 500ms;
+        }
+        img.rotate{
+            transform:rotateZ(180deg);
+        }
+        .flex{
+            position:relative;
+        }
+        .slide{
+            position:absolute;
+            top:0;
+            width:100%;
+            background:#fff;
+            transition:linear all 500ms;
+        }
+        .slide.active{
+            transform:translate(0,100px);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="../image/more.png" onclick="handleClick(this)"/>
+    <img src="../image/ml.jpeg" onclick="handleClick2(this)"/>
+    <div class="flex">
+        <li>我是会切换显示的</li>
+        <li>我是会切换显示的</li>
+        <li>我是会切换显示的</li>
+        <div class="slide">
+            <h4>我是会滑动的</h4>
+            <h4>我是会滑动的</h4>
+            <h4>我是会滑动的</h4>
+        </div>
+    </div>
+    <div class="">
+        <h4>我是底部的</h4>
+        <h4>我是底部的</h4>
+        <h4>我是底部的</h4>
+    </div>
+</div>
+<script>
+    let handleClick = (ele) => {
+        ele.classList.toggle("rotate");
+        document.querySelector(".slide").classList.toggle("active");
+    };
+
+    let handleClick2 = (ele) => {
+        ele.style.transform = "translateX(100px)";
+        ele.style.transition = "linear all 500ms";
+    };
+</script>
+</body>
+</html>

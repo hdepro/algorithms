@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [class^=submit]{
+            width:500px;
+        }
+        .button-primary{
+            width:294px;
+            height:120px;
+            border-radius:18px;
+            text-align:center;
+            line-height:120px;
+            font-size:42px;
+            background:#009df7;
+            color:#fff;
+        }
+        .right{
+            float:right;
+        }
+        .submit2{
+            overflow:hidden;
+        }
+        .submit2 button{
+            vertical-align:middle;
+        }
+        .submit3{
+            line-height:120px;  /*用行高来解决普通文字与按钮对齐的问题，padding以及vertical-align都不起作用*/
+        }
+    </style>
+</head>
+<body>
+<div class="submit1">
+    <span>￥180（已优惠￥20）</span>
+    <button class="button-primary">提交订单</button>
+</div>
+<br/><br/><br/>
+<div class="submit2">
+    <span>￥180（已优惠￥20）</span>
+    <button class="button-primary right">提交订单</button>
+</div>
+<br/><br/><br/>
+<div class="submit3">
+    <span>￥180（已优惠￥20）</span>
+    <button class="button-primary right">提交订单</button>
+</div>
+</body>
+</html>
