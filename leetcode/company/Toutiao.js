@@ -3,18 +3,18 @@
  */
 
 
-// var line;
-// while(line=read_line()){
-//     var arr=line.split(' ');
-//     var n=+arr[0];
-//     var m=+arr[1];
-//     var sum=0;
-//     for(var i=0;i<m;i++){
-//         sum+=n;
-//         n=Math.sqrt(n);
-//     }
-//     print(sum.toFixed(2));
-// }
+var line;
+while(line=read_line()){
+    var arr=line.split(' ');
+    var n=+arr[0];
+    var m=+arr[1];
+    var sum=0;
+    for(var i=0;i<m;i++){
+        sum+=n;
+        n=Math.sqrt(n);
+    }
+    print(sum.toFixed(2));
+}
 
 // function maxSequence(n,arr){
 //     var left=-1,right=-1,flag=1,lTemp=0;
