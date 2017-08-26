@@ -239,7 +239,8 @@ let res = arrObj.map(ao => {
 console.log(res,arrObj);
 
 let objobj = {obj:{a:1}};
-console.log({...objobj});
+//console.log({...objobj});
+
 
 
 

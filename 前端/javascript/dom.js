@@ -13,6 +13,10 @@
 //window.innerHeight表示浏览器显示文档区域在屏幕中占有的高度，浏览器窗口resize或者console查看元素都会使得其改变
 //window.screen.availHeight表示显示屏幕的高度,是不会变的
 
+//e.clientY是在视口中的y坐标   一般小于设备的高度，< window.innerHeight
+//e.pageY是在html文档中的y坐标
+//e.screenY是在屏幕中的y坐标
+
 function stopBubble(e){
     var event = e||window.event;
     event.stopPropagation?event.stopPropagation():event.cancelBubble=true;

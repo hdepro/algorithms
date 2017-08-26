@@ -69,5 +69,40 @@ function throttle(callback,delay){
     }
 }
 
+// const throttle = (cb,delay) => {   //节流阀
+//     let on = false;
+//     return function(){
+//         let context = this;
+//         let args = arguments;
+//         //console.log("args",args);
+//         if(!on){
+//             on = true;
+//             setTimeout(() => {
+//                 cb.call(context,args[0]);
+//                 on = false;
+//             },delay)
+//         }
+//     }
+// };
+
+//实现bind
+Function.prototype.bind = function(context,...args){
+    if (typeof this !== "function") {
+        // closest thing possible to the ECMAScript 5 internal IsCallable function
+        throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+    }
+    let fBind = this;
+    let bound = function(){
+        let func = function(){};
+        fBind.apply(
+            this instanceof func && context?this:context || window,
+            args.concat(Array.prototype.slice.call(arguments))
+        );
+    };
+    func.prototype = this.prototype;
+    bound.prototype = new func();
+    return bound;
+};
+
 
 
