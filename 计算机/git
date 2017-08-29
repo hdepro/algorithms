@@ -11,3 +11,12 @@ git config -l
 git log 中发现已经commit的内容 heben.hb@hz.ali.com 邮箱不符合要求，请务必使用公司邮箱。
 git config user.email heben.hb@alibaba-inc.com   //没有用
 git commit --amend --author="heben.hb <heben.hb@alibaba-inc.com>"   //起作用
+
+
+git push --set-upstream origin b  向远程新建一个分支b
+
+删除
+git branch -d aaaa   删除本地分支aaaa
+git push origin -d aaaa  删除远程分支aaaa
+git push origin :b    删除远程分支b
+git branch |grep "[^master]"|xargs git branch -d   删除本地非master的分支
