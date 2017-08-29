@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .child{
+            float:left;
+            height:200px;
+            background:green;
+        }
+        .father1{
+            background:red;
+            /*height:100px;*/
+            overflow:hidden;
+        }
+
+        .father2{
+            background:red;
+            height:100px;
+        }
+        .clear{
+            clear:both;
+        }
+
+        .father3{
+            background:red;
+            height:100px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="father1">
+        <div class="child">aaa</div>
+        <div>bbbbbbb</div>
+    </div><br/>
+    <div class="father2">
+        <div class="child">aaa</div>
+        <div class="clear">aaa</div>
+    </div><br/>
+    <div class="father3">
+        <div class="child">aaa</div>
+    </div>
+</div>
+</body>
+</html>
