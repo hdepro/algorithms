@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+    放在顶部的css或者js会阻塞dom树的构建，即DOMContentLoaded会在这些文件加载完后触发；
+    放在底部的js,css不会阻塞在它前面的dom树的构建，但在不同浏览器下对渲染的情况不一样。ie下css与js表现一样，firefox下css(底部)连后面的dom渲染也不会阻塞，
+    chrome浏览器中放在底部的css会阻塞整个页面的渲染；当有css放在底部时，ie下会阻塞DOMContentLoaded事件，其他浏览器不会。
+    浏览器转完圈是load事件触发
+    -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link href="http://localhost:8888/assets/libs/test.css" rel="stylesheet">-->
+    <!--<link href="http://localhost:8888/assets/libs/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="http://localhost:8888/assets/libs/antd.min.css" rel="stylesheet">-->
+    <!--<script src="http://localhost:8888/assets/libs/bootstrap.min.js"></script>-->
+    <!--<style>
+        @import url("http://localhost:8888/assets/libs/test.css");
+    </style>-->
+    <link href="http://localhost:8888/assets/libs/test.css" rel="stylesheet">
+    <script src="http://localhost:8888/assets/libs/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    console.log("addEventListener load");
+    document.addEventListener("DOMContentLoaded",function(){
+        console.log("DOMContentLoaded");
+    });
+    window.addEventListener("load",function(){
+        console.log("load");
+    })
+</script>
+<div id="start">teststart</div>
+<script>
+    console.log("js start");
+</script>
+<script>
+    setTimeout("console.log('setTimeout')",3000);
+</script>
+<!--<script src="http://localhost:8888/assets/libs/bootstrap.min.js"></script>-->
+<script>
+    console.log("js end");
+</script>
+<link href="http://localhost:8888/assets/libs/test.css" type="text/css" rel="stylesheet">
+<script src="http://localhost:8888/assets/libs/jquery.min.js"></script>
+<div id="end">
+    testend
+</div>
+</body>
+</html>

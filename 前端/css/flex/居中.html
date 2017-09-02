@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .flex{
+            display:flex;
+            height:300px;
+            background:red;
+            justify-content:center;
+        }
+        .flex-child{
+            background:green;
+            display:flex;
+        }
+        .flex-child:nth-child(2){
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="flex">
+    <p class="flex-child">flex居中1</p>
+    <p class="flex-child">
+        <span>flex居中2</span>
+    </p>
+</div>
+</body>
+</html>

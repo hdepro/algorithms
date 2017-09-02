@@ -24,11 +24,7 @@ const longestCommonSubstring = function(str1,str2){
     for(let i=0;i<len1;i++){
         dp[i] = [];
         for(let j=0;j<len2;j++){
-            if(dp[i][j] === undefined){
-                dp[i][j] = compare(str1.slice(i),str2.slice(j));
-            }else{
-                dp[i][j] = str1[i] === str2[j]?dp[i-1][j-1]-1:compare(str1.slice(i),str2.slice(j));
-            }
+            dp[i][j] = compare(str1.slice(i),str2.slice(j));
             maxCommon = Math.max(dp[i][j],maxCommon);
         }
     }
@@ -36,6 +32,7 @@ const longestCommonSubstring = function(str1,str2){
 };
 console.log(longestCommonSubstring("aancsasnjdndddaajsss","bhndncsasjkdkdk"));
 console.log(longestCommonSubstring("a","b"));
+console.log(longestCommonSubstring("acb","bc"));
 
 const longestCommonSubstring2 = function(str1,str2){
     let len1 = str1.length;
@@ -80,34 +77,41 @@ console.log(longestCommonSubstring2("a","b"));
 
 //最长公共子序列
 const longestCommonSequence = function(arr1,arr2){
+    arr1.unshift("0");
+    arr2.unshift("0");
     let len1 = arr1.length;
     let len2 = arr2.length;
-    let flag=[],dp=[],result = [],k=0;
-    for(let i=0;i<len1;i++){
-        for(let j=0;j<len2;j++){
-            if(arr1[i] === arr2[j] && !flag[j]){
-                dp[k++] = [i,j];
-                flag[j] = 1;
-                break;
+    let dp=[],result = [],maxSequence = 0,end1=0,end2=0;
+    dp[0] = new Array(len2).fill(0);
+    for(let i=1;i<len1;i++){
+        if(!dp[i]) dp[i] = [];
+        dp[i][0] = 0;
+        for(let j=1;j<len2;j++){
+            if(arr1[i] === arr2[j]){
+                dp[i][j] = dp[i-1][j-1]+1;
+            }else{
+                dp[i][j] = Math.max(dp[i-1][j],dp[i][j-1]);
+            }
+            if(dp[i][j] > maxSequence){
+                end1 = i;
+                end2 = j;
             }
         }
     }
-    console.log(dp);
-    let tmp = [];
-    if(dp.length) result = tmp[0] = [arr1[dp[0][0]]];
-    for(let i=1,len=dp.length;i<len;i++){
-        tmp[i] = [];
-        for(let j=i-1;j>=0;j--){
-            if(dp[j][0] < dp[i][0] && dp[j][1] < dp[i][1]){
-                tmp[i] = tmp[i].concat(tmp[j]);
-                break;
-            }
-        }
-        tmp[i].push(arr1[dp[i][0]]);
-        if(tmp[i].length > result.length){
-            result = tmp[i];
+    let i=end1,j=end2;
+    //console.log(dp);
+    while(i>=1 && j>=1){
+        if(arr1[i] === arr2[j]){
+            result.unshift(arr1[i]);
+            i--;
+            j--;
+        }else if(dp[i][j-1] === dp[i][j]){
+            j--;
+        }else if(dp[i-1][j] === dp[i][j]){
+            i--;
         }
     }
     return result;
 };
 console.log(longestCommonSequence([1,5,6,4,7,3,2,6,7,5,3,2],[2,3,2,6,5,7,4,3,5,8,2]));
+console.log(longestCommonSequence([1],[2,3,2,1,1,6,5,7,4,3,5,8,2]));

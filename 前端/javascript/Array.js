@@ -46,3 +46,20 @@ console.log(Array.prototype.concat.apply([],{0:'a',1:'b'}));
 
 //如果一个元素是undefined，它不会在map遍历中出现
 
+
+{
+    let arr1 = [1,3,2,4];
+arr1.sort((a,b) => a>b);   //正序
+console.log(arr1);
+
+let arr2 = [1,3,2,4];
+arr2.sort((a,b) => a-b);   //正序
+console.log(arr2);
+
+console.log(+ 0 === 0);
+console.log(0+true);
+
+if([0]){
+    console.log("[0,0] is true");
+}
+}
