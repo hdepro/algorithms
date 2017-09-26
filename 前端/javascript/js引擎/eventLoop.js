@@ -12,42 +12,64 @@
 // 浏览器事件触发线程
 // Http请求线程
 
-// setImmediate(function(){
-//     console.log(1);
-// });
-// setTimeout(function(){
-//     console.log(2);
-// },0);
-// new Promise(function(resolve){
-//     console.log(3);
-//     resolve();
-//     console.log(4);
-// }).then(function(){
-//     console.log(5);
-// });
-// console.log(6);
-// process.nextTick(function(){
-//     console.log(7);
-// });
-// console.log(8);
+/*setImmediate(function(){
+    console.log(1);
+});
+setTimeout(function(){
+    console.log(2);
+},0);
+new Promise(function(resolve){
+    console.log(3);
+    resolve();
+    console.log(4);
+}).then(function(){
+    console.log(5);
+});
+console.log(6);
+process.nextTick(function(){
+    console.log(7);
+});
+console.log(8);*/
 
 //加入两个nextTick的回调函数
-process.nextTick(function () {
-    console.log('nextTick延迟执行1');
-});
-process.nextTick(function () {
-    console.log('nextTick延迟执行2');
-});
-// 加入两个setImmediate()的回调函数
-setImmediate(function () {
-    console.log('setImmediate延迟执行1');
-    // 进入下次循环
-    process.nextTick(function () {
-        console.log('强势插入');
-    });
-});
-setImmediate(function () {
-    console.log('setImmediate延迟执行2');
-});
 
-console.log('正常执行');
+// process.nextTick(function () {
+//     console.log('nextTick延迟执行1');
+// });
+// process.nextTick(function () {
+//     console.log('nextTick延迟执行2');
+// });
+// // 加入两个setImmediate()的回调函数
+// setImmediate(function () {
+//     console.log('setImmediate延迟执行1');
+//     // 进入下次循环
+//     process.nextTick(function () {
+//         console.log('强势插入');
+//     });
+// });
+// setImmediate(function () {
+//     console.log('setImmediate延迟执行2');
+// });
+//
+// console.log('正常执行');
+// function foo(){
+//     return
+//     2;
+// }
+// console.log(foo());
+
+function foo(n,arr){
+    let min=arr[0];
+    for(let i=1;i<n-1;i++){
+        if(arr[i]<=min){
+            min=arr[i];
+        }
+    }
+    if(min <= arr[n-1]){
+        console.log(2);
+        return 2;
+    }else{
+        console.log(3);
+        return 3;
+    }
+}

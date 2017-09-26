@@ -139,5 +139,42 @@
     W3.org: If none of the three [top, bottom,height] are 'auto': If both 'margin-top' and 'margin-bottom'
     are 'auto', solvethe equation under the extra constraint that the two margins get equal values.AKA: center the block vertically
 </p>
+
+<style>
+    .parent{
+        height:300px;
+        font-size:0px;
+        background:red;
+    }
+    .child{
+        font-size:14px;
+        display:inline-block;
+        vertical-align:middle;
+    }
+    .childAdd{
+        display:inline-block;
+        vertical-align:middle;
+        height:100%;
+        width:0px;
+    }
+</style>
+
+<div class="parent">
+    <div class="child">
+        我是垂直居中的,多点字可以变成多行文本我是垂直居中的,
+        可以将新增的元素高度设置的和父级元素一样高，宽度为0，并且同样设置vertical-middle:middle以及display:inline-block;
+        由于两个元素之间的空白会被解析，因此需要在父级设置font-size:0px;在子级又将font-size设置回来。
+    </div>
+    <lable class="childAdd"></label>
+</div>
+
+<div style="height:200px;display:table-cell;vertical-align:middle;">
+    <div>我是垂直居中的,多点字可以变成多行文本我是垂直居中的,多点字可以变成多行文本我是垂直居中的,多点字可以变成多行文本我是垂直居中的,多点字可以变成多行文本</div>
+</div>
+
+<div style="height:200px;font-size:0px;line-height:200px;">
+    <img style="vertical-align:middle;" src="http://sandbox.runjs.cn/uploads/rs/26/ddzmgynp/img1.gif" width="100px" alt="test">
+    <span style="font-size:30px">xxxxxxxxxxxxx</span>
+</div>
 </body>
 </html>

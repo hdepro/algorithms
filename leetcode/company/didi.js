@@ -110,3 +110,28 @@ function kthNum(input_arrays,k){
 
 kthNum([1,2,3,4,5,2,5,7,8,6],2);
 
+
+function xors(arr){
+    var n=arr.length,tmp, i = 0, k = 0;
+    var  xors = [arr[0]];
+    while (i < n) {
+        i++;
+        xors[i] = xors[i - 1] ^ arr[i];
+    }
+    var hashMap={};
+    console.log(xors);
+    for (var j = 0; j < n; j++) {
+        if (xors[j] == 0) {
+            k++;
+        } else if (hashMap[xors[j]]!==undefined && j-hashMap[xors[j]]>0){
+            k++;
+            hashMap[xors[j]] = j+1;
+        }else{
+            hashMap[xors[j]] = j;
+        }
+        console.log(hashMap);
+    }
+    return k;
+}
+
+

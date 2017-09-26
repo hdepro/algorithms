@@ -130,3 +130,17 @@ passValue(obj);
 console.log(obj);
 passObject(obj);
 console.log(obj);
+
+function *fib(n){
+    let [a1,a2] = [1,1];
+    let i=0;
+    while(i<n){
+        yield a1;
+        [a1,a2] = [a2,a1+a2];
+        i++;
+    }
+}
+console.log("fib --------------------------");
+for(let res of fib(10)){
+    console.log(res);
+}

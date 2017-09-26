@@ -9,7 +9,7 @@
 
 "use strict";
 
-const nthUglyNumber = function(n) {
+const nthUglyNumber = function(arr) {
     let result = [1],L1=[1],L2=[1],L3=[1];
     let i=0,j=0,k=0;
     if(n==1) return 1;
@@ -26,4 +26,4 @@ const nthUglyNumber = function(n) {
     }
 };
 
-console.log(nthUglyNumber(4));
+console.log(nthUglyNumber([3,0,2,2]));

@@ -63,3 +63,19 @@ console.log(object.getName());
 console.log((object.getName = object.getName)());
 var s = object.getName;
 console.log(s());
+
+if(false){
+    var ss="ss";
+}else{
+    console.log("ss = ",ss);
+}
+
+
+let func = function fun(){
+    console.log("fun");
+};
+
+//fun();  //无法找到
+
+let func2 = new Function("x","y","return x+y");
+console.log(func2(1,2));

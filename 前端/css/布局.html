@@ -4,33 +4,96 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .main{
-            height:400px;
-            width:100%;
-            background:red;
+        .page1 .sub{
+            height:200px;
+            width:190px;
+            background:green;
             float:left;
-            position:relative;
+        }
+        .page1 .extra{
+            height:300px;
+            width:190px;
+            background:yellow;
+            float:right;
+        }
+        .page1 .main{
+            height:400px;
+            background:red;
             margin:0 190px;
         }
-        .sub{
+
+        .page2{
+            padding: 0 190px;
+        }
+        .page2 .sub{
+            position: relative;
+            left:-190px;
             height:200px;
             width:190px;
             background:green;
             float:left;
             margin-left:-100%;
         }
-        .extra{
+        .page2 .extra{
+            position: relative;
+            right:-190px;
             height:300px;
             width:190px;
             background:yellow;
             float:left;
             margin-left:-190px;
         }
+        .page2 .main{
+            height:400px;
+            background:red;
+            float: left;
+            width:100%;
+        }
+
+
+
+        .page3 .main-wrap{
+            width:100%;
+            float:left;
+        }
+        .main{
+            margin:0 200px;
+            height:300px;
+            background:red;
+        }
+        .page3 .sub{
+            float:left;
+            width:200px;
+            height:100px;
+            margin-left:-100%;
+            background:green;
+        }
+        .page3 .extra{
+            float:left;
+            width:200px;
+            height:100px;
+            margin-left:-200px;
+            background:yellow;
+        }
     </style>
 </head>
 <body>
-<div class="page">
+<!--<div class="page1">
+    <div class="sub">我是sub部分</div>
+    <div class="extra">我是extra部分</div>
     <div class="main">我是main部分</div>
+</div>
+<br/>
+<div class="page2">
+    <div class="main">我是main部分</div>
+    <div class="sub">我是sub部分</div>
+    <div class="extra">我是extra部分</div>
+</div>
+<br/>-->
+<div class="page3">
+    <div class="main-wrap">
+        <div class="main">我是main部分</div>
+    </div>
     <div class="sub">我是sub部分</div>
     <div class="extra">我是extra部分</div>
 </div>

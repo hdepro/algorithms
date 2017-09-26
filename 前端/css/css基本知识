@@ -27,7 +27,7 @@ png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.
       sessionStorage 的数据在浏览器关闭后自动删除
       语意化更好的内容元素，比如 article、footer、header、nav、section
       表单控件，calendar、date、time、email、url、search
-      新的技术webworker, websockt, Geolocation
+      新的技术webworker, websocket, Geolocation
 
       移除的元素
       纯表现的元素：basefont，big，center，font, s，strike，tt，u；

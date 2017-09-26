@@ -33,23 +33,32 @@ test2(30);   //function
 //在函数执行上下文中，VO是不能直接访问的，此时由活动对象(activation object,缩写为AO)扮演VO的角色
 
 //函数的作用域链在定义阶段就已经创建了
-function closure(){
-    let tet = 10;
-    //let tet2 = 10;
-    return function(){
-        //console.log(this);
-        let t = tet;
-        console.log("t = ",t);
-        console.log("tet2 = ",tet2);
+// function closure(){
+//     let tet = 10;
+//     //let tet2 = 10;
+//     return function(){
+//         //console.log(this);
+//         let t = tet;
+//         console.log("t = ",t);
+//         console.log("tet2 = ",tet2);
+//     }
+// }
+//
+// var tFunc = closure();
+// var tet = 100;
+// function tClosure(){
+//     //console.log(this);
+//     var tet2 = 100;
+//     tFunc();
+// }
+// tClosure();
+
+function func(age) {
+    console.log(age);
+    var age = 25;
+    console.log(age);
+    function age() {
     }
+    console.log(age);
 }
-
-var tFunc = closure();
-var tet = 100;
-function tClosure(){
-    //console.log(this);
-    var tet2 = 100;
-    tFunc();
-}
-tClosure();
-
+func(18);

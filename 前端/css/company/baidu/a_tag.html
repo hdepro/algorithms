@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        a[href]{
+        /*a[href]{
             color:blue;
+        }*/
+        a:link{
+            color:orange;
+        }
+        a:visited{
+            color:purple;
         }
         a:hover{
             color:red;
         }
+        a:active{
+            color:yellow;
+        }
         a:nth-child(2n+1){
-            color:green;
+            //color:green;
         }
         a[href^="www.baidu.com"]:after{
             content:"↗";
@@ -25,9 +34,12 @@
 <a href="www.baidu.com/a">测试lvha</a>
 <a href="www.baidu.com/b">测试2</a>
 <a href="www.baidu.com">测试3</a>
-<a href="www.baidu.com">测试4</a>
-<a href="www.baidu.com">测试5</a>
+<a href="http://www.baidu.com" target="_blank">测试4</a>
+<a href="http://www.baidu.com">测试5</a>
 <a href="www.jd.com">测试6</a>
 <a href="www.jd.com">测试7</a>
+<a href="#">测试8</a>
+<a href="">测试9</a>
+<a>测试10</a>
 </body>
 </html>

@@ -147,4 +147,5 @@ html页面显示过程
 在一定的情况下统一提交队列，进而实现layout操作。
 
 
+以下事件不冒泡：blur、focus、load、unload
 

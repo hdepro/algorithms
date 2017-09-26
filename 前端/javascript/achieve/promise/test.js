@@ -110,9 +110,20 @@ new Promise((resolve,reject)=>{
 });
 
 new Promise((resolve,reject)=>{
-    if(){
+    if(true){
         resolve();
     }else{
         reject();
     }
 });
+
+new Promise((resolve,reject)=>{
+    resolve(new Promise((resolve,reject)=>{
+        resolve("promise resolve promise");
+    }));
+}).then(onFulfilled=>{
+    console.log(onFulfilled)
+}).catch(err => {
+    console.log("catch = ",err)
+});
+

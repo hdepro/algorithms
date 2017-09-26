@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            color: #000000;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        thead{
+            background: #3d444c;
+            color: #ffffff;
+        }
+        td,th{
+            border: 1px solid #e1e1e1;
+            padding: 0;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table id="jsTrolley">
+    <thead><tr><th>名称</th><th>价格</th><th>操作</th></tr></thead>
+    <tbody>
+    <tr><td>产品1</td><td>10.00</td><td><a href="javascript:void(0);">删除</a></td></tr>
+    <tr><td>产品2</td><td>30.20</td><td><a href="javascript:void(0);">删除</a></td></tr>
+    <tr><td>产品3</td><td>20.50</td><td><a href="javascript:void(0);">删除</a></td></tr>
+    </tbody>
+    <tfoot><tr><th>总计</th><td colspan="2">60.70(3件商品)</td></tr></tfoot>
+    <button onclick="add([{name:'test1',price:16.30},{name:'test2',price:16.30}])">添加</button>
+</table>
+<script>
+    function add(items) {
+        if(items.length == 0) return;
+        var tbody = document.querySelector("#jsTrolley tbody");
+        var totalNode = document.querySelector("[colspan]");
+        var domFrag = document.createDocumentFragment();
+        items.forEach(function(item,index){
+            var tr = document.createElement("tr");
+            tr.innerHTML = "<td>"+item.name+"</td><td>"+item.price.toFixed(2)+"</td><td><a href='javascript:void(0);'>删除</a></td>";
+            domFrag.appendChild(tr);
+        });
+        tbody.appendChild(domFrag);
+        var oldTotalPrice = +totalNode.innerText.match(/\d+\.\d+/)[0];
+        var newNum = tbody.children.length;
+        var newTotalPrice = (oldTotalPrice + items.reduce((a,b) => a.price+b.price)).toFixed(2);
+        totalNode.innerText = newTotalPrice+"("+newNum+"件商品)";
+    }
+
+    function bind() {
+        var tbody = document.querySelector("#jsTrolley tbody");
+        var totalNode = document.querySelector("[colspan]");
+        tbody.addEventListener("click",function(e){
+            if(e.target.tagName === "A"){
+                var tr = e.target.parentNode.parentNode;
+                var price = +e.target.parentNode.previousSibling.innerText;
+                var oldTotalPrice = +totalNode.innerText.match(/\d+\.\d+/)[0];
+                var oldTotalNum = +totalNode.innerText.match(/\((\d+)/)[1];
+                var newNum = oldTotalNum - 1;
+                var newTotalPrice = (oldTotalPrice - price).toFixed(2);
+                totalNode.innerText = newTotalPrice+"("+newNum+"件商品)";
+                tbody.removeChild(tr);
+            }
+        });
+    }
+    bind();
+</script>
+</body>
+</html>

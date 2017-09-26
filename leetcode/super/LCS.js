@@ -99,7 +99,7 @@ const longestCommonSequence = function(arr1,arr2){
         }
     }
     let i=end1,j=end2;
-    //console.log(dp);
+    console.log(i,j);
     while(i>=1 && j>=1){
         if(arr1[i] === arr2[j]){
             result.unshift(arr1[i]);
@@ -113,5 +113,5 @@ const longestCommonSequence = function(arr1,arr2){
     }
     return result;
 };
-console.log(longestCommonSequence([1,5,6,4,7,3,2,6,7,5,3,2],[2,3,2,6,5,7,4,3,5,8,2]));
+console.log(longestCommonSequence([1,5,6,4,7,3,2,6,7,5,3,14,2],[2,3,2,6,5,7,4,3,5,8,2]));
 console.log(longestCommonSequence([1],[2,3,2,1,1,6,5,7,4,3,5,8,2]));

@@ -17,6 +17,13 @@
         .flex-child:nth-child(2){
             align-items: center;
         }
+
+        .parent{
+            display: flex;
+        }
+        .child{
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -25,6 +32,10 @@
     <p class="flex-child">
         <span>flex居中2</span>
     </p>
+</div>
+
+<div class="parent" style="background-color: gray; height: 100px;">
+    <div class="child" style="background-color: lightblue;">测试文字</div>
 </div>
 </body>
 </html>
