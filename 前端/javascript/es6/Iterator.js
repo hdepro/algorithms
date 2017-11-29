@@ -11,36 +11,11 @@
 // }
 
 
+let f = function(){};
+let f2 = () => {};
+console.log(f instanceof Function);
+console.log(f2 instanceof Function);
 
-{
-    function gen_promise(value) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => resolve(value), 1000);
-        })
-    }
-
-    function *gen() {
-        let a = yield gen_promise("aaa");
-        console.log(a);
-        let b = yield gen_promise("bbb");
-        console.log(b);
-        let c = yield gen_promise("ccc");
-        console.log(c);
-        return 111;
-    }
-    let ge = gen();
-    let gn = ge.next();
-
-    function gn_recurision(){
-        if(gn.done) {return};
-        gn.value.then(onFulfilled => {
-            gn = ge.next(onFulfilled);
-            gn_recurision();
-        })
-    }
-    gn_recurision();
-
-    // for(let gg of ge){
-    //     console.log(gg);
-    // }
-}
+let obj_create = Object.create(Object.prototype);
+console.log(obj_create instanceof Object);
+console.log(obj_create.__proto__  === Object.prototype);

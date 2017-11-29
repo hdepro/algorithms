@@ -92,9 +92,9 @@ Function.prototype.bind = function(context,...args){
         throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
     }
     let fBind = this;
+    let func = function(){};
     let bound = function(){
-        let func = function(){};
-        fBind.apply(
+        return fBind.apply(
             this instanceof func && context?this:context || window,
             args.concat(Array.prototype.slice.call(arguments))
         );
@@ -104,5 +104,18 @@ Function.prototype.bind = function(context,...args){
     return bound;
 };
 
+let str = ' a b c ';
+console.log(str.replace(/^\s+|\s+$/,''));
+
+function add(a){
+    return a+'010';
+}
+//console.log(add(020));
+
+let n=(2).toString();
+console.log(typeof(n));
+
+exports = "baidu";
+window.exports = "baidu";
 
 

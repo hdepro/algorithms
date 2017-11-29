@@ -53,3 +53,12 @@ console.log("A"-"B"+2);
 console.log(0&&2||1);
 
 console.log("isNaN ",isNaN(NaN));
+
+let str = "123";
+str++;
+console.log(str);
+str="123f";
+str++;
+console.log(str);
+
+console.log("A" === new String("A"));

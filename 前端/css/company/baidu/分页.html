@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none!important;
+        }
+        .pagination{
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        .pagination li{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            line-height: 30px;
+            margin: 0 5px 0 0;
+            font-size: 14px;
+            text-align: center;
+            border: 1px solid #00bc9b;
+            color: #00bc9b;
+            cursor: pointer;
+        }
+        .pagination li.current,
+        .pagination li:hover{
+            background: #00bc9b;
+            color: #ffffff;
+        }
+        .demo {
+            margin: 10px 0;
+            padding: 10px;
+            background: #eeeeee;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<ul class="pagination" id="jsPagination">
+    <li>首页</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li>末页</li>
+</ul>
+<script>
+    function pagination(total, current) {
+        var jsPagination = document.getElementById("jsPagination");
+        var jsPaginationClass = jsPagination.classList;
+        if(total === 0){
+            jsPaginationClass.add("hide");
+            return ;
+        }
+        var firstChildClass = jsPagination.firstElementChild.classList;
+        var lastChildClass = jsPagination.lastElementChild.classList;
+        var middle = current;
+        var hover = 3;
+        if(total <= 5){
+            for(var i=1;i<=5;i++){
+                var child = jsPagination.children[i];
+                if(i <= total){
+                    child.innerHTML =  i;
+                }else{
+                    child.classList.add("hide");
+                }
+            }
+            jsPagination.children[current].classList.add("current");
+            firstChildClass.add("hide");
+            lastChildClass.add("hide");
+            return ;
+        }
+        if(current <= 3){
+            middle = 3;
+            hover = middle;
+            firstChildClass.add("hide");
+        }else{
+            firstChildClass.remove("hide");
+        }
+        if(current >= total - 2){
+            middle = total - 2;
+            hover = 3 + current - middle;
+            lastChildClass.add("hide");
+        }else{
+            lastChildClass.remove("hide");
+        }
+        for(var i=1;i<=5;i++){
+            var child = jsPagination.children[i];
+            child.innerHTML =  middle - 3 + i;
+        }
+        jsPagination.children[hover].classList.add("current");
+    }
+    pagination(6,3);
+</script>
+</body>
+</html>
